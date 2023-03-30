@@ -29,7 +29,7 @@ const options = {
   },
 };
 
-var ingredient = ''
+var ingredient = 'chicken';
 
 
 fetch(
