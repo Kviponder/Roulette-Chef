@@ -5,6 +5,10 @@
   --tan: #f1dec9;
   --redBrown: #864000;
 }
+::selection {
+  background-color: black;
+  color: goldenrod;
+}
 
 #bodyCSS {
   font-family: "Raleway Dots", "Raleway", sans-serif;
@@ -85,8 +89,8 @@
     width: 4rem;
     height: auto;
     text-align: center;
-    margin-bottom: 1rem;}
-
+    margin-bottom: 1rem;
+  }
 }
 
 @media only screen and (max-width: 576px) {
