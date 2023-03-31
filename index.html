@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                darkBrown: '#8D7B68',
+                brown:'#A4907C',
+                lightBrown: '#C8B6A6',
+                tan: '#F1DEC9',
+              }
+            }
+          }
+        }
+      </script>
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <h1>
+<body class="bg-tan">
+    <header class="bg-darkBrown h-15">
+        <h1 class="text-3xl font-bold text-center">
             Roulette Chef
         </h1>
         <nav>
@@ -27,7 +43,7 @@
     </aside>
 
     <main>
-        <button> Random Button</button>
+        <button>Random Button</button>
         <div id="imgContainer">
             <figure></figure>
             <figure></figure>
