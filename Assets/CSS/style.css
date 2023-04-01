@@ -1,0 +1,125 @@
+:root {
+  --darkBrown: #8d7b68;
+  --brown: #a4907c;
+  --lightBrown: #c8b6a6;
+  --tan: #f1dec9;
+  --redBrown: #864000;
+}
+::selection {
+  background-color: black;
+  color: goldenrod;
+}
+
+#bodyCSS {
+  font-family: "Raleway Dots", "Raleway", sans-serif;
+}
+#headerCSS {
+  background-image: url(/Assets/Images/WoodBack.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 250px;
+  background-blend-mode: screen;
+  height: 120px;
+}
+
+#headerCSS h1 {
+  color: var(--redBrown);
+  text-decoration: overline underline dotted;
+
+  text-transform: uppercase;
+  text-shadow: 1px 9px 15px black;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  padding: 2rem;
+}
+
+#background {
+  background-image: url(/Assets/Images/stone.jpg);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center;
+  background-blend-mode: screen;
+  z-index: 1;
+}
+#titleText {
+  background-image: url(/Assets/Images/leather.jpg);
+  background-repeat: no-repeat;
+  background-size: 29% 90%;
+  background-position: center;
+  z-index: 2;
+}
+
+.button {
+  font-size: 1rem;
+  padding: 2rem 0;
+  width: 4rem;
+  height: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(236, 228, 228);
+  background: linear-gradient(90deg, rgb(88, 75, 38) 0%, rgb(100, 90, 60) 100%);
+  border-radius: 4px;
+}
+
+.signInBtn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(247, 244, 242, 0.6);
+  transition: transform 150ms;
+  transform: scale(1.03);
+}
+
+@media only screen and (max-width: 768px) {
+  #headerCSS {
+    height: 80px;
+    background-size: 100% 150px;
+  }
+  #headerCSS h1 {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+  #background {
+    background-size: 50%;
+  }
+  #titleText {
+    background-size: 50% 80%;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 2rem 0;
+    width: 4rem;
+    height: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #headerCSS {
+    height: 60px;
+    background-size: 100% 100px;
+  }
+  #headerCSS h1 {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  #background {
+    background-size: 70%;
+  }
+  #titleText {
+    background-size: 70% 60%;
+  }
+  .button {
+    font-size: 8px;
+    padding: 1rem 0;
+    width: 2rem;
+    height: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* fonts added if you want to try :
+font-family: 'Abel', sans-serif;
+font-family: 'Bona Nova', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Raleway Dots', cursive; */
