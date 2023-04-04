@@ -15,7 +15,7 @@
             theme: {
                 extend: {
                     colors: {
-                        darkBrown: '#8D7B68',
+                        darkTan: '#8D7B68',
                         brown: '#A4907C',
                         lightBrown: '#C8B6A6',
                         tan: '#F1DEC9',
@@ -30,17 +30,13 @@
 <body id="bodyCSS" class="bg-tan ">
 
     <header class="h-30 relative">
-        <img id="headerCSS" src="./assets/images/woodBack.jpg">
-        <img id="background" src="./assets/images/stone.jpg">
-        <img id="titleText" src="./assets/images/leather.jpg">
-
         <div id="titleText" class="text-center">
             <h1 class="text-4xl font-bold p-2">
                 <p id="rChef">Roulette Chef</p>
             </h1>
         </div>
 
-        <nav class="p-1 m-2 w-30 h-15 max-w-s absolute top-0 right-0">
+        <nav class="p-1 m-2 w-30 h-20 max-w-s absolute top-0 right-0">
             <div class="flex mt-2">
                 <div class="flex-1">
                     <h3>Email</h3>
@@ -59,11 +55,13 @@
 
     </header>
 
-    <aside>
+    <aside class="bg-lightBrown">
         <h2>Search</h2>
-
-        <button>Search Button</button>
-    </aside>
+        <form>
+          <input type="search" placeholder="Search for a recipe">
+          <button type="submit">Search</button>
+        </form>
+      </aside>
 
     <main>
         <button>Random Button</button>
@@ -99,7 +97,7 @@
         <figure></figure>
     </section>
 
-    <script src="/Assets/js/script.js"></script>
+    <script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
