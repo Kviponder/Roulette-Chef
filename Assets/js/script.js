@@ -62,3 +62,28 @@ var ingredient = 'chicken';
   
 //  getLocalStorage ();
 //})
+
+
+//Below is what we can adjust from Kai's weather app to make searched recipes 1) appear, 2) clear onClick of a clear button
+//Change const's to match what we have as on our search form
+const searchForm = document.querySelector('.search-form');
+const rsList = document.querySelector('.rsList');
+const clearBtn = document.querySelector(".clearBtn")
+
+document
+function addRecentSearch(city) {
+  const li = document.createElement('li');
+  li.textContent= city;
+  li.addEventListener('click', function() {
+    document.querySelector('.search-form input[type="text"]').value = city;
+    searchForm.dispatchEvent(new Event('submit'));
+  });
+  rsList.prepend(li);
+}
+//need to make clearBBtn element on html
+
+clearBtn.addEventListener('click', function() {
+  while (rsList.firstChild) {
+rsList.removeChild(rsList.firstChild);
+  }
+});
