@@ -38,11 +38,6 @@ nav {
   align-items: flex-end;
 }
 
-nav h3 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.8rem;
-  margin-bottom: 0.2rem;
-}
 
 nav input[type="text"],
 nav input[type="password"] {
