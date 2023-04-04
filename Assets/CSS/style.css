@@ -1,9 +1,10 @@
 :root {
-  --darkBrown: #8d7b68;
+  --darkTan: #8d7b68;
   --brown: #a4907c;
   --lightBrown: #c8b6a6;
   --tan: #f1dec9;
   --redBrown: #864000;
+  --darkBrown: #1A120B;
 }
 ::selection {
   background-color: black;
@@ -59,6 +60,49 @@ header {
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
+
+aside {
+  padding: 10px;
+  border-radius: 8px;
+  width: 350px;
+  margin: 3px 2px 3px 2px;
+  border: 2px solid var(--darkBrown);
+
+}
+
+aside h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+aside input[type="search"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--darkBrown);
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+aside button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
+}
+
+aside button[type="submit"]:hover {
+  background-color: var(--darkTan);
+}
+
 .signInBtn {
   font-size: 12px;
   font-weight: bold;
