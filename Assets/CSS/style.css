@@ -109,7 +109,24 @@ aside button[type="submit"] {
 aside button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
-
+#resultsCont {
+  background-color: var(--lightBrown);
+  border: 2px solid var(--darkBrown);
+  border-radius: 8px;
+  padding: 10px;
+  width: 90%;
+  margin: 3px 2px 3px 2px;
+}
+#resultsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#resultsList li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
 .signInBtn {
   font-size: 12px;
   font-weight: bold;

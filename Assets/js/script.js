@@ -62,3 +62,21 @@ var ingredient = 'chicken';
   
 //  getLocalStorage ();
 //})
+
+
+//Below is what we can adjust to make searched recipes 1) appear, 2) clear onClick of a clear button
+
+// function addRecentSearch(city) {
+//   const li = document.createElement('li');
+//   li.textContent= city;
+//   li.addEventListener('click', function() {
+//     document.querySelector('.search-form input[type="text"]').value = city;
+//     searchForm.dispatchEvent(new Event('submit'));
+//   });
+//   rsList.prepend(li);
+// }
+// clearBtn.addEventListener('click', function() {
+//   while (rsList.firstChild) {
+// rsList.removeChild(rsList.firstChild);
+//   }
+// });
