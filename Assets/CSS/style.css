@@ -15,38 +15,45 @@
   font-family: "Raleway", sans-serif;
 }
 header {
-  width: 100%;
-}
-
-#headerCSS {
-  width: 100%;
+  background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
   height: 120px;
-  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#headerCSS h1 {
+header h1 {
+  font-family: 'Raleway Dots', 'Raleway', sans-serif;
+  font-size: 2.5rem;
   color: var(--redBrown);
-  font-family: "Raleway Dots", "Raleway";
   text-decoration: overline underline dotted;
-  left: 1%;
-  top: 53px;
 }
 
-#background {
-  position: absolute;
-  top: 3px;
-  left: 0.25%;
-  height: 110px;
-  width: 380px;
-  z-index: 2;
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
-#titleText {
-  position: absolute;
-  top: 7px;
-  left: 0.5%;
-  width: 360px;
-  height: 100px;
-  z-index: 3;
+
+nav h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+nav input[type="text"],
+nav input[type="password"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--lightBrown);
+  width: 10rem;
 }
 
 #rChef {
