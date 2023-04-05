@@ -63,6 +63,7 @@ nav input[type="password"] {
 }
 
 aside {
+  flex-basis: calc(70% - 10px);
   padding: 10px;
   border-radius: 8px;
   width: 350px;
@@ -102,6 +103,40 @@ aside button[type="submit"] {
 aside button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
+
+
+
+
+#sign-up {
+  background-color: var(--darkTan);
+  width: 350px;
+  color: var(--redBrown);
+  padding: 10px;
+  margin: 3px 2px 3px 2px;
+  border: 2px solid var(--darkBrown);
+  border-radius: 4px;
+}
+#sign-up input {
+  width: 150px
+}
+
+#sign-up button[type="submit"] {
+  width: 40%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
+}
+
+#signUpBtn[type="submit"]:hover {
+  background-color: var(--darkTan);
+}
+
+
 #resultsCont {
   background-color: var(--lightBrown);
   border: 2px solid var(--darkBrown);
