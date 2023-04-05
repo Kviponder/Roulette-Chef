@@ -1,4 +1,3 @@
-
 //New API Key
 // const options = {
 // 	method: 'GET',
@@ -13,57 +12,50 @@
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
 
-  
 // var ingredient = 'chicken';
 
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
-		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-	}
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93",
+    "X-RapidAPI-Host": "tasty.p.rapidapi.com",
+  },
 };
 
-fetch('https://tasty.p.rapidapi.com/tags/list', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+fetch("https://tasty.p.rapidapi.com/tags/list", options)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err));
 
-
-
-
-
-
-let password = "";
-for (let i = 0; i < length; i++) {
-  password += charSet[Math.floor(Math.random() * charSet.length)];
-}
-return password;
-
+// let password = "";
+// for (let i = 0; i < length; i++) {
+//   password += charSet[Math.floor(Math.random() * charSet.length)];
+// }
+// return password;
 
 //Below is what we can adjust from Kai's weather app to make searched recipes 1) appear, 2) clear onClick of a clear button
 //Change const's to match what we have as on our search form
-const searchForm = document.querySelector('.search-form');
-const rsList = document.querySelector('.rsList');
-const clearBtn = document.querySelector(".clearBtn")
+const searchForm = document.querySelector(".search-form");
+const rsList = document.querySelector(".rsList");
+const clearBtn = document.querySelector(".clearBtn");
 
-document
-function addRecentSearch(city) {
-  const li = document.createElement('li');
-  li.textContent= city;
-  li.addEventListener('click', function() {
-    document.querySelector('.search-form input[type="text"]').value = city;
-    searchForm.dispatchEvent(new Event('submit'));
-  });
-  rsList.prepend(li);
-}
+// document
+// function addRecentSearch(city) {
+//   const li = document.createElement('li');
+//   li.textContent= city;
+//   li.addEventListener('click', function() {
+//     document.querySelector('.search-form input[type="text"]').value = city;
+//     searchForm.dispatchEvent(new Event('submit'));
+//   });
+//   rsList.prepend(li);
+// }
 //need to make clearBBtn element on html
 
-clearBtn.addEventListener('click', function() {
-  while (rsList.firstChild) {
-rsList.removeChild(rsList.firstChild);
-  }
-});
+// clearBtn.addEventListener('click', function() {
+//   while (rsList.firstChild) {
+// rsList.removeChild(rsList.firstChild);
+//   }
+// });
 
 // Below are other uses for the tasty api to consider
 
@@ -110,7 +102,5 @@ rsList.removeChild(rsList.firstChild);
 
 //  randomRecipe();
 
-  
 //  getLocalStorage ();
 //})
-

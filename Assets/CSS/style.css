@@ -4,7 +4,7 @@
   --lightBrown: #c8b6a6;
   --tan: #f1dec9;
   --redBrown: #864000;
-  --darkBrown: #1A120B;
+  --darkBrown: #1a120b;
 }
 ::selection {
   background-color: black;
@@ -25,7 +25,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Raleway Dots', 'Raleway', sans-serif;
+  font-family: "Raleway Dots", "Raleway", sans-serif;
   font-size: 2.5rem;
   color: var(--redBrown);
   text-decoration: overline underline dotted;
@@ -38,13 +38,12 @@ nav {
   align-items: flex-end;
 }
 
-
 nav input[type="text"],
 nav input[type="password"] {
   padding: 0.5rem;
   border: none;
   border-radius: 0.5rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   margin-bottom: 0.5rem;
   background-color: var(--lightBrown);
@@ -69,11 +68,10 @@ aside {
   width: 350px;
   margin: 3px 2px 3px 2px;
   border: 2px solid var(--darkBrown);
-
 }
 
 aside h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -83,7 +81,7 @@ aside input[type="search"] {
   padding: 8px;
   border: 1px solid var(--darkBrown);
   border-radius: 8px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   margin-bottom: 8px;
   background-color: white;
@@ -94,7 +92,7 @@ aside button[type="submit"] {
   padding: 0.5rem;
   border: none;
   border-radius: 0.5rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: var(--tan);
   background-color: var(--brown);
@@ -118,7 +116,7 @@ aside button[type="submit"]:hover {
   padding: 0;
 }
 #resultsList li {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -141,6 +139,44 @@ aside button[type="submit"]:hover {
   transition: transform 150ms;
   transform: scale(1.03);
 }
+
+#recipeList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+#recipeList figure {
+  width: calc(33.33% - 1rem);
+  margin-bottom: 1rem;
+  background-color: var(--tan);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#recipeList img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#recipeList figcaption {
+  padding: 8px;
+}
+
+#recipeList h3 {
+  margin-bottom: 8px;
+}
+
+#recipeList p {
+  font-size: 8px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
 
 @media only screen and (max-width: 768px) {
   #headerCSS {
