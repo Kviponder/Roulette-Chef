@@ -8,6 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abel&family=Bona+Nova&family=Raleway+Dots&family=Raleway:ital,wght@0,800;1,100;1,400;1,600&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -39,72 +40,131 @@
         <nav class="p-1 m-2 w-30 h-20 max-w-s absolute top-0 right-0">
             <div class="flex mt-2">
                 <div class="flex-1">
-                    <h3>Email</h3>
                     <input
                         class="rounded-l-lg p-2 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
                         placeholder="Username">
                 </div>
                 <div class="flex-1 ml-2">
-                    <h3 class="text-left">Password</h3>
                     <input class="rounded-r-lg p-2 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
                         placeholder="Password">
                 </div>
             </div>
             <button class="signInBtn">Sign In</button>
         </nav>
-
+        <!--Turn this into a sign-up/sign-in option research apis maybe-->
     </header>
+    <!--I think that we could have the flex change when someone is signed in
+meaning: when not signed in, search box and sign-in box display,
+when signed in search box shifts left to allow for more room for saved recipes, 
+meaning we can switch from  "".flexContainer { justify-content: space-evenly" to  "justify-content: space-around"-->
+    <div class="flexContainer">
+        <aside class="searchclass bg-lightBrown" id="searchaside">
+            <h2>Search</h2>
 
-    <aside class="bg-lightBrown">
-        <h2>Search</h2>
+            <form>
+                <input type="search" placeholder="Search for a recipe">
+                <button type="submit">Search</button>
 
-        <form>
-          <input type="search" placeholder="Search for a recipe">
-          <button type="submit">Search</button>
-        </form>
-        <div id="resultsCont">
-            <ol id="resultsList">
-               
-            </ol>
-        </div>
-      </aside>
+                <button type="submit">Save Recipe</button>
+            </form>
+            <div id="resultsCont">
+                <ol id="resultsList">
+
+                </ol>
+            </div>
+        </aside>
+        <!-- Need to add place to save recipes, use similar format to recipes below, but just recipe name as link to page-->
+        <!--Comment out this section to see how the page could switch-->
+        <section id="sign-up" class="showNone">
+            <div class="inputcont">
+                <h3>Unlock the pantry</h3>
+                <input class="rounded-l-lg p-1 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
+                    placeholder="Username">
+                <input class="rounded-r-lg p-1 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
+                    placeholder="Password">
+                <br>
+                <button type="submit" id="signUpBtn">Sign Up!</button>
+                <h3>Sign in to start saving recipes!</h3>
+            </div>
+    </div>
+
+    </section>
+
+    <section id="savedRecipes" class="showNone">
+        <li id="sRecipe1" href="">Recipe </li>
+        <li id="sRecipe2" href="">Recipe </li>
+        <li id="sRecipe3" href="">Recipe </li>
+        <li id="sRecipe4" href="">Recipe </li>
+        <li id="sRecipe5" href="">Recipe </li>
+        <li id="sRecipe6" href="">Recipe </li>
+        <li id="sRecipe7" href="">Recipe </li>
+        <li id="sRecipe8" href="">Recipe </li>
+        <li id="sRecipe9" href="">Recipe </li>
+        <li id="sRecipe10" href="">Recipe </li>
+    </section>
+    </div>
 
 
-    <main>
-        <button class="btn">Random Button</button>
- 
-        <div id="imgContainer">
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-        </div>
-    </main>
+    <div class="randomBtncontainer">
+        <button class="randomBtn" id="getRandom">Random Button</button>
+    </div>
+    <div id="randomRecipe" class="row recipeRan"></div>
+  
+
+
 
     <section id="showNone">
 
         <!-- showNone class will be used with js to hide text upon an event we decide on, we discussed hiding this upon searching a recipe -->
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora animi, ea quaerat magni fugiat labore
-            inventore dolorem similique quasi consequatur nostrum quas nobis eius temporibus velit mollitia doloremque
-            pariatur ipsum molestiae veritatis reprehenderit suscipit. Amet soluta modi pariatur neque ut dicta ab
-            explicabo eaque. Minima et ad odio assumenda nemo magnam exercitationem ipsa suscipit hic sit! Tempora
-            corrupti, doloremque dolorem atque doloribus pariatur culpa delectus ab esse vitae unde, optio iure autem.
-            Numquam maiores quas voluptas totam praesentium. In laudantium, corrupti dolores odio voluptates quia
-            ratione commodi nobis aliquid vel? Quo, exercitationem praesentium quibusdam itaque ad numquam. Impedit,
-            dolore tempora!
+            <br>r
+            I'm Not even sure we need this Paragraph for anything fi anyone decides itll be redundant
         </p>
     </section>
+    <div>
 
-    <section id="recipeList">
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-    </section>
+        <h3 class="text-2xl">Recipes :</h3>
+        <section id="recipeList">
+
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+        </section>
+    </div>
 
     <script src="./Assets/js/script.js"></script>
 </body>
