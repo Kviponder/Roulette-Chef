@@ -72,7 +72,7 @@ nav input[type="password"] {
 aside {
   padding: 10px;
   border-radius: 8px;
-  width: 350px;
+  max-width: 350px;
   margin: 3px 2px 3px 2px;
   border: 2px solid var(--darkBrown);
 }
@@ -121,7 +121,7 @@ div #inputcont {
   justify-content: center;
   align-items: center;
   background-color: var(--darkTan);
-  width: 350px;
+  max-width: 350px;
   color: var(--redBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
@@ -155,7 +155,7 @@ div #inputcont {
   justify-content: center;
   align-items: center;
   background-color: var(--darkTan);
-  width: 800px;
+  max-width: 800px;
   color: var(--redBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
