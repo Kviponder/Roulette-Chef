@@ -8,6 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abel&family=Bona+Nova&family=Raleway+Dots&family=Raleway:ital,wght@0,800;1,100;1,400;1,600&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -63,6 +64,7 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
             <form>
                 <input type="search" placeholder="Search for a recipe">
                 <button type="submit">Search</button>
+
                 <button type="submit">Save Recipe</button>
             </form>
             <div id="resultsCont">
@@ -75,12 +77,14 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
         <!--Comment out this section to see how the page could switch-->
         <section id="sign-up" class="showNone">
             <div class="inputcont">
+                <h3>Unlock the pantry</h3>
                 <input class="rounded-l-lg p-1 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
                     placeholder="Username">
                 <input class="rounded-r-lg p-1 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
                     placeholder="Password">
                 <br>
-                <button type="submit" class="signUpBtn">Sign Up!</button>
+                <button type="submit" id="signUpBtn">Sign Up!</button>
+                <h3>Sign in to start saving recipes!</h3>
             </div>
     </div>
 
