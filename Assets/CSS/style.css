@@ -62,8 +62,12 @@ nav input[type="password"] {
   -webkit-text-stroke-color: black;
 }
 
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 aside {
-  flex-basis: calc(70% - 10px);
   padding: 10px;
   border-radius: 8px;
   width: 350px;
@@ -104,10 +108,16 @@ aside button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
 
-
-
+div #inputcont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--darkTan);
   width: 350px;
   color: var(--redBrown);
@@ -117,10 +127,12 @@ aside button[type="submit"]:hover {
   border-radius: 4px;
 }
 #sign-up input {
-  width: 150px
+  width: 150px;
 }
 
 #sign-up button[type="submit"] {
+  display: block;
+  margin: 2px auto;
   width: 40%;
   padding: 0.5rem;
   border: none;
@@ -136,6 +148,18 @@ aside button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
 
+#savedRecipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkTan);
+  width: 800px;
+  color: var(--redBrown);
+  padding: 10px;
+  margin: 3px 2px 3px 2px;
+  border: 2px solid var(--darkBrown);
+  border-radius: 4px;
+}
 
 #resultsCont {
   background-color: var(--lightBrown);
@@ -211,7 +235,6 @@ aside button[type="submit"]:hover {
   line-height: 1.5;
   margin-bottom: 8px;
 }
-
 
 @media only screen and (max-width: 768px) {
   #headerCSS {
