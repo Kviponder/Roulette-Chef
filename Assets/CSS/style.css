@@ -274,12 +274,26 @@ div #inputcont {
 }
 
 #recipeList figure {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  
+
+}
+/*Above is for items within style
+ below if for box styles*/
+#recipeList figure {
+  min-height: 300px;
   width: calc(33.33% - 16px);
   margin-bottom: 16px;
   background-color: var(--lightBrown);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border: 2px solid var(--darkBrown);
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;  
   overflow: hidden;
+
 }
 
 #recipeList figure:hover {
@@ -289,11 +303,12 @@ div #inputcont {
 
 #recipeList img {
   width: 100%;
-  height: auto;
+  height: 100px;
   object-fit: cover;
 }
 
 #recipeList figcaption {
+  margin: 5px;
   padding: 8px;
 }
 
@@ -302,7 +317,7 @@ div #inputcont {
 }
 
 #recipeList p {
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.5;
   margin-bottom: 8px;
 }
