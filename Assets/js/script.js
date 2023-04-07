@@ -36,9 +36,26 @@
 const randomRecipeBtn = document.getElementById('getRandom');
 const randomContainer = document.getElementById('randomRecipe');
 
+randomRecipeBtn.addEventListener('click', () => {
+	fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+		.then(response => response.json())
+		.then(response => {
+			createRandomRecipe(response.meals[0]);
+		})
+		.catch(e => {
+			console.warn(e);
+		});
+});
 
 //Add an *event listener* to each *saved recipe item* that *fetches the recipe details and *displays* them on a *separate page*.
 
+
+
+// let password = "";
+// for (let i = 0; i < length; i++) {
+//   password += charSet[Math.floor(Math.random() * charSet.length)];
+// }
+// return password;
 
 //Below is what we can adjust from Kai's weather app to make searched recipes 1) appear, 2) clear onClick of a clear button
 //Change const's to match what we have as on our search form
@@ -66,3 +83,8 @@ const clearBtn = document.querySelector(".clearBtn");
 
 // Below are other uses for the tasty api to consider
 
+
+//  randomRecipe();
+
+//  getLocalStorage ();
+//})
