@@ -31,7 +31,68 @@
 
 //Display the results of the API fetch in the *resultsList element*
 
+// Sign in form elements*
+// coded out for saving purposes
+const form = document.getElementById('form');
+const form = document.getElementById('username');
+const form = document.getElementById('password');
+
 //Add an *event listener* to the *sign-in form* that *handles authentication* and *toggles the showNone* class to *display the saved recipes list*.
+FormData.addEventListener('submit', e => {
+	e.preventDefault();
+
+	validateInputs();
+});
+
+const setError = (element, message) => {
+	const inputControl = element.parentElement;
+	const errorDisplay = inputControl.querySelector('error');
+
+	errorDisplay.innerText = message;
+	inputControl.classList.add('error');
+	inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+	const inputControl = element.parentElement;
+	const errorDisplay = inputControl.querySelector('error');
+
+	errorDisplay.innerText = '';
+	inputControl.classList.add('success');
+	inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+	const usernameValue = username.value.trim();
+	const passwordValue = password.value.trim();
+
+	if(usernameValue === '') {
+		setError(username, 'Username is required');
+	} else {
+		setSuccess(username);
+	}
+
+	if(passwordValue === '') {
+        setError(password, 'Password is required');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
+    }
+
+};
+
+
+
+//Display the results of the API fetch in the *resultsList element*
+
+//Add an *event listener* to the *sign-in form* that *handles authentication* and *toggles the showNone* class to *display the saved recipes list*.
+
 //Add an *event listener* to the *Random Button* that *fetches a random recipe* from the API and *displays* it on the page
 const randomRecipeBtn = document.getElementById('getRandom');
 const randomContainer = document.getElementById('randomRecipe');
