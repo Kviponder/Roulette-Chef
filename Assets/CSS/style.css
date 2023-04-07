@@ -15,7 +15,7 @@
   font-family: monospace, sans-serif;
 }
 header {
-  background: linear-gradient(90deg, var(--darkBrown) 5%, var(--redBrown) 95%);
+  background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
   height: 120px;
   display: flex;
   justify-content: space-around;
@@ -27,9 +27,8 @@ header {
 
 header h1 {
   font-family: sans-serif;
-  font-size: 2.5rem;
-  color: black;
-  margin: 5px auto 5px 0;
+  font-size: 36px;
+  width: auto;
 }
 nav {
   background-color: var(--brown);
@@ -59,7 +58,9 @@ nav #inputC {
 #inputC input {
   width: 100%;
 }
-
+ .fire {
+  width: fit-content;
+ }
 nav input[type="text"],
 nav input[type="password"] {
   padding: 8px;
@@ -78,7 +79,6 @@ nav button {
 
 #rChef {
   text-align: center;
-  border-bottom: 2px solid;
 }
 
 h1 {
@@ -131,7 +131,7 @@ span {
       -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
   }
   100% {
-    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #fefcc9,
+    text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
       -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
       -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
   }
@@ -144,7 +144,7 @@ span {
       -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
   }
   100% {
-    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #fefcc9,
+    text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
       -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
       -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
   }
@@ -152,27 +152,18 @@ span {
 
 @-o-keyframes animation {
   0% {
-    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85,
-      -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
-      -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+    text-shadow: 0 0 20px #ebe313, 10px -10px 30px #feec85,
+      -20px -20px 40px #ffae34, 20px -40px 50px #c96004,
+      -20px -60px 60px #d04b0e, 0 -80px 70px #b93407, 10px -90px 80px #451b0e;
   }
   100% {
-    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #fefcc9,
-      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
-      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+    text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
+    -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+    -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  
   }
 }
-/* #rChef {
-  font-family: sans-serif;
-  color: var(--redBrown);
-  text-decoration: overline underline dotted;
-  left: 25%;
 
-  text-transform: uppercase;
-  text-shadow: 1px 9px 15px black;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
-} */
 .signInBtn {
   background-color: var(--lightBrown);
   font-size: 12px;
@@ -204,7 +195,6 @@ span {
   font-size: 48px;
   font-weight: 900;
   font-family: sans-serif;
-  text-transform: uppercase;
   margin-bottom: 16px;
 }
 
@@ -311,7 +301,10 @@ div #inputcont {
   background-color: var(--brown);
   cursor: pointer;
 }
-
+header div {
+  width: 100%;
+  margin: 0 auto;
+}
 #sign-up button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
@@ -356,8 +349,8 @@ div #inputcont {
   margin: 2px 2px;
   border: 2px solid var(--darkBrown);
   border-radius: 20% 0 0 0;
-  height: 30px;
-  width: 45px;
+  height: 50px;
+  width: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,8 +471,6 @@ div #inputcont {
   justify-content: space-between;
 }
 
-/*Above is for items within style
- below if for box styles*/
 #recipeList figure {
   min-height: 300px;
   width: calc(33.33% - 16px);
@@ -547,20 +538,15 @@ div #inputcont {
   body {
     width: 100%;
   }
-  header {
-    width: 100%;
-    display: flex;
-    height: auto;
-    justify-content: space-around;
+  header h1 {
+    font-family: sans-serif;
+    animation: animation 0.65s ease-in-out infinite alternate;
+    font-size: 24px;
+    width: auto;
+    -moz-animation: animation 0.65s ease-in-out infinite alternate;
+    -webkit-animation: animation 0.65s ease-in-out infinite alternate;
+    -o-animation: animation 0.65s ease-in-out infinite alternate;
   }
-  header span {
-    scale: 0.85;
-  }
-  #rChef {
-    width: 100%;
-    scale: 70%;
-  }
-
   aside input[type="search"] {
     font-size: small;
   }
@@ -597,12 +583,16 @@ div #inputcont {
   body {
     width: 100%;
   }
-  header {
+  /* header {
     width: 100%;
     flex-direction: row;
     height: auto;
     justify-content: space-between;
   }
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  } */
   #rChef {
     scale: 70%;
     text-align: center;
