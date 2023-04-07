@@ -232,11 +232,12 @@ div #inputcont {
   margin: 2px 2px;
   border: 2px solid var(--darkBrown);
   border-radius: 20% 0 0 0;
-  height: calc(20% - 10px);
-  width: calc(20% - 10px);
+  height: 30px;
+  width: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25%;
 }
 #savedRecipes li:hover {
   background-color: var(--darkBrown);
@@ -458,9 +459,23 @@ header nav {
   #sRecipeCont {
     width: 100%;
   }
+  #sRecipeCont h3 {
+   font-size: smaller;
+  }
   #sign-up {
     width: 100%;
   }
+  #savedRecipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #savedRecipes li {
+    width: 80px;
+    margin: 10px;
+  }
+}
 }
 
 @media only screen and (max-width: 857px) {
@@ -483,9 +498,23 @@ header nav {
     width: 80%;
     flex-direction: column;
   }
+  #sRecipeCont h3 {
+    font-size: small;
+   }
   #sign-up {
     width: 80%;
     flex-direction: column;
+  }
+  #savedRecipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #savedRecipes li {
+    width: 33.33%;
+    max-width: 200px;
+    margin: 10px;
   }
 }
 
@@ -500,4 +529,16 @@ header nav {
   #sign-up {
     width: 50%;
   }
+  #savedRecipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #savedRecipes li {
+    width: 25%;
+    max-width: 200px;
+    margin: 10px;
+  }
+}
 }
