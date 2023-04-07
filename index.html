@@ -39,31 +39,34 @@
 
 <body id="bodyCSS" class="bg-tan ">
 
-    <header class="p-2 m-2" id="headerFlex">
+    <header class="p-2 m-0" id="headerFlex">
         <div class="text-center">
             <h1 class="text-5xl font-bold p-2 m-2">
-                <p id="rChef"> 
-                    <span class="fire">R</span><span class="burn">o</span><span class="burn">u</span><span class="burn">l</span><span class="burn">e</span><span class="burn">t</span><span class="burn">t</span><span class="fire">e</span>. <span class="fire">C</span><span class="burn">h</span><span class="burn">e</span><span class="fire">f</span>
+                <p id="rChef">
+                    <span class="fire">R</span><span class="burn">o</span><span class="burn">u</span><span
+                        class="burn">l</span><span class="burn">e</span><span class="burn">t</span><span
+                        class="burn">t</span><span class="fire">e</span>. <span class="fire">C</span><span
+                        class="burn">h</span><span class="burn">e</span><span class="fire">f</span>
                 </p>
             </h1>
         </div>
 
-        <nav class="p-1 m-2 w-30 h-20 max-w-s">
-            <div class="flex mt-2">
-                <div class="flex-1">
-                    <input
-                        class="rounded-l-lg p-2 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
-                        placeholder="Username">
-                </div>
-                <div class="flex-1 ml-2">
-                    <input class="rounded-r-lg p-2 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
-                        placeholder="Password">
-                </div>
-            </div>
-            <button class="signInBtn">Sign In</button>
-        </nav>
         <!--Turn this into a sign-up/sign-in option research apis maybe-->
     </header>
+    <nav>
+        <div class="inputCont">
+            <div id="inputC" class="w-60">
+                        <input id="inputCol"
+                            class=" uInputBox rounded-l-lg p-2 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
+                            placeholder="Username">
+                    
+                        <input id="inputCol"
+                            class=" pInputBox rounded-r-lg p-2 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
+                            placeholder="Password">
+            </div>
+        </div>
+        <button class="signInBtn">Sign In</button>
+    </nav>
     <div id="greeting">
         <h2>Welcome to our Recipe Box!</h2>
         <p>Welcome to our website! We're glad you're here. Whether you're a seasoned chef or a novice in the kitchen,
@@ -137,18 +140,18 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
     </div>
 
 
-        <div class="randomBtncontainer">
-            <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
-                a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
-                and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
-            <button class="randomBtn" id="getRandom">Random Button</button>
-            <div id="randomRecipe" class="row recipeRan">
-                <div id="column"></div>
-            </div>
+    <div class="randomBtncontainer">
+        <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
+            a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
+            and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
+        <button class="randomBtn" id="getRandom">Random Button</button>
+        <div id="randomRecipe" class="row recipeRan">
+            <div id="column"></div>
         </div>
+    </div>
 
 
-        <div id="recipesContainer">
+    <div id="recipesContainer">
         <h3 class="text-4xl">Recipes :</h3>
         <section id="recipeList">
 
@@ -197,7 +200,7 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
                 <p>Recipe Info</p>
             </figure>
         </section>
-        </div>
+    </div>
     </div>
 
     <script src="./Assets/js/script.js"></script>
