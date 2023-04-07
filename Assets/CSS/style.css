@@ -308,6 +308,8 @@ div #inputcont {
 }
 
 #recipeList figcaption {
+  font-size: larger;
+  text-decoration: underline;
   margin: 5px;
   padding: 8px;
 }
