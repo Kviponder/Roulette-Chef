@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -34,6 +34,7 @@ header h1 {
 }
 
 nav {
+  margin: 5px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,14 +43,14 @@ nav {
 
 nav input[type="text"],
 nav input[type="password"] {
-  padding: 0.5rem;
+  padding: 8px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 16px;
+  margin-top: 8px;
   background-color: var(--lightBrown);
-  width: 10rem;
+  width: 160px;
 }
 
 #sign-up input:focus {
