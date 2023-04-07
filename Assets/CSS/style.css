@@ -51,6 +51,7 @@ nav input[type="password"] {
   background-color: var(--lightBrown);
   width: 10rem;
 }
+
 #sign-up input:focus {
   outline: none;
   box-shadow: 0 0 0 2px var(--darkBrown);
@@ -67,6 +68,25 @@ nav input[type="password"] {
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
+#greeting {
+  background-color: var(--tan);
+  color: var(--darkBrown);
+  text-align: center;
+  padding: 32px;
+}
+
+#greeting h1 {
+  font-size: 48px;
+  font-weight: 900;
+  font-family: "Raleway Dots", "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+#greeting p {
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+}
 
 .flexContainer {
   display: flex;
@@ -76,15 +96,16 @@ nav input[type="password"] {
 aside {
   padding: 10px;
   border-radius: 8px;
-  max-width: 350px;
+  min-height: 20%;
+  max-width: 30%;
   margin: 3px 2px 3px 2px;
   border: 2px solid var(--darkBrown);
 }
 
 aside h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 aside input[type="search"] {
@@ -100,7 +121,7 @@ aside input[type="search"] {
 
 aside button[type="submit"] {
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   margin: 2px auto;
   border: none;
   border-radius: 0.5rem;
@@ -123,10 +144,11 @@ div #inputcont {
 
 #sign-up {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: var(--lightBrown);
-  max-width: 350px;
+  min-height: 20%;
+  max-width: 30%;
   color: var(--darkBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
@@ -135,23 +157,22 @@ div #inputcont {
 }
 #sign-up h3 {
   font-size: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   margin: 10px 5px 10px 5px;
   text-align: center;
 }
 #sign-up input {
   margin: 3px;
   width: 150px;
-
 }
 
 #sign-up button[type="submit"] {
   display: block;
   margin: 3px auto;
   width: 40%;
-  padding: 0.5rem;
+  padding: 8px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: var(--tan);
@@ -163,17 +184,47 @@ div #inputcont {
   background-color: var(--darkTan);
 }
 
-#savedRecipes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#sRecipeCont {
   background-color: var(--darkTan);
-  max-width: 800px;
+  width: 35%;
+  min-height: 220px;
   color: var(--redBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
   border: 2px solid var(--darkBrown);
   border-radius: 4px;
+}
+#savedRecipes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 90%;
+}
+
+#sRecipeCont #savedRecipes li {
+  background-color: var(--tan);
+  color: var(--darkBrown);
+  flex-direction: column;
+  padding: 2px 3px;
+  margin: 2px 2px;
+  border: 2px solid var(--darkBrown);
+  border-radius: 20% 0 0 0;
+  height: calc(20% - 10px);
+  width: calc(20% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#savedRecipes li:hover {
+  background-color: var(--darkBrown);
+  color: var(--tan);
+  scale: 105%;
+  box-shadow: 1px 1px 3px black;
+}
+#savedRecipes li::selection {
+  background-color: var(--darkBrown);
+  color: var(--tan);
 }
 
 #resultsCont {
@@ -191,15 +242,15 @@ div #inputcont {
 }
 #resultsList li {
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 .signInBtn {
   font-size: 12px;
   font-weight: bold;
   padding: 8px;
-  width: 4rem;
-  height: 2rem;
+  width: 48px;
+  height: 32px;
   text-align: center;
   text-decoration: none;
   color: rgb(236, 228, 228);
@@ -218,17 +269,22 @@ div #inputcont {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2rem auto;
+  margin: 16px auto;
   max-width: 1200px;
 }
 
 #recipeList figure {
-  width: calc(33.33% - 1rem);
-  margin-bottom: 1rem;
-  background-color: var(--tan);
+  width: calc(33.33% - 16px);
+  margin-bottom: 16px;
+  background-color: var(--lightBrown);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
+}
+
+#recipeList figure:hover {
+  scale: 105%;
+  box-shadow: 1px 1px 3px black;
 }
 
 #recipeList img {

@@ -1,31 +1,29 @@
-//New API Key
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
-		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
-	}
-};
-
-fetch('https://themealdb.p.rapidapi.com/random.php', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+// //New API Key
 // const options = {
 // 	method: 'GET',
 // 	headers: {
 // 		'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
-// 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+// 		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
 // 	}
 // };
 
-// fetch('https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup', options)
+// fetch('https://themealdb.p.rapidapi.com/random.php', options)
 // 	.then(response => response.json())
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
 
-// var ingredient = 'chicken';
-
+	const options = {
+		method: 'GET',
+		headers: {
+			'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
+			'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
+		}
+	};
+	
+	fetch('https://themealdb.p.rapidapi.com/categories.php', options)
+		.then(response => response.json())
+		.then(response => console.log(response))
+		.catch(err => console.error(err));
 //Some things to be done I added asterisks just so its easier to look and see what needs done to what part:
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
 
@@ -50,6 +48,7 @@ randomRecipeBtn.addEventListener('click', () => {
 });
 
 //Add an *event listener* to each *saved recipe item* that *fetches the recipe details and *displays* them on a *separate page*.
+
 
 
 // let password = "";
