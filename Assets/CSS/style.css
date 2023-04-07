@@ -1,4 +1,3 @@
-/* need to combine the two css files and remove null one*/
 
 :root {
   --darkTan: #8d7b68;
@@ -22,7 +21,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -34,6 +33,7 @@ header h1 {
 }
 
 nav {
+  margin: 5px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,14 +42,14 @@ nav {
 
 nav input[type="text"],
 nav input[type="password"] {
-  padding: 0.5rem;
+  padding: 8px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 16px;
+  margin-top: 8px;
   background-color: var(--lightBrown);
-  width: 10rem;
+  width: 160px;
 }
 
 #sign-up input:focus {
@@ -97,7 +97,7 @@ aside {
   padding: 10px;
   border-radius: 8px;
   min-height: 20%;
-  max-width: 30%;
+  width: 400px;
   margin: 3px 2px 3px 2px;
   border: 2px solid var(--darkBrown);
 }
@@ -135,6 +135,14 @@ aside button[type="submit"] {
 aside button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
+aside button[type="submit"]:active {
+  background-color: var(--tan);
+}
+
+aside button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--brown), 0 0 0 4px var(--tan);
+}
 
 div #inputcont {
   display: flex;
@@ -148,7 +156,7 @@ div #inputcont {
   justify-content: space-between;
   background-color: var(--lightBrown);
   min-height: 20%;
-  max-width: 30%;
+  width: 400px;
   color: var(--darkBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
@@ -180,13 +188,27 @@ div #inputcont {
   cursor: pointer;
 }
 
-#signUpBtn[type="submit"]:hover {
+#sign-up button[type="submit"]:hover {
   background-color: var(--darkTan);
+}
+
+#sign-up button[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+#sign-up button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 3px var(--tan);
+}
+
+#sign-up button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #sRecipeCont {
   background-color: var(--darkTan);
-  width: 35%;
+  width: 500px;
   min-height: 220px;
   color: var(--redBrown);
   padding: 10px;
@@ -225,6 +247,64 @@ div #inputcont {
 #savedRecipes li::selection {
   background-color: var(--darkBrown);
   color: var(--tan);
+}
+.randomBtncontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--redBrown);
+  max-height: 400px;
+}
+.randomBtncontainer h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 1rem;
+  color: var(--tan);
+  text-shadow: 1px 1px var(--brown);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.randomBtn {
+  display: block;
+  margin: 16px auto;
+  width: 10%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
+}
+.randomBtn:hover {
+  background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
+  transform: scale(1.5);}
+
+.randomBtn:active {
+  background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
+  transform: translateY(2px);
+}
+
+.randomBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));;
+}
+
+#randomRecipe {
+  background-color: var(--lightBrown);
+  border: 2px solid var(--darkBrown);
+  border-radius: 8px;
+  padding: 10px;
+  width: 30%;
+  height: 300px;
+  margin: 3px auto;
 }
 
 #resultsCont {
@@ -343,58 +423,69 @@ div #inputcont {
   transform: scale(1.03);
 }
 
-@media only screen and (max-width: 768px) {
-  #headerCSS {
-    height: 80px;
-    background-size: 100% 150px;
-  }
-  #headerCSS h1 {
-    font-size: 2.5rem;
-    padding: 1rem;
-  }
-  #background {
-    background-size: 50%;
-  }
-  #titleText {
-    background-size: 50% 80%;
-  }
-  .button {
-    font-size: 1rem;
-    padding: 2rem 0;
-    width: 4rem;
+@media only screen and (max-width: 375px) {
+  /* Blank media query for 375px width */
+  header {
+    flex-direction: column;
     height: auto;
-    text-align: center;
-    margin-bottom: 1rem;
+  }
+header nav {
+  align-self: stretch;
+}
+  aside input[type="search"] {
+    font-size: small;
+    
+  }
+  #flexContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+  #sRecipeCont {
+    width: 100%;
+  }
+  #sign-up {
+    width: 100%;
   }
 }
 
-@media only screen and (max-width: 576px) {
-  #headerCSS {
-    height: 60px;
-    background-size: 100% 100px;
-  }
-  #headerCSS h1 {
-    font-size: 2rem;
-    padding: 0.5rem;
-  }
-  #background {
-    background-size: 70%;
-  }
-  #titleText {
-    background-size: 70% 60%;
-  }
-  .button {
-    font-size: 8px;
-    padding: 1rem 0;
-    width: 2rem;
+@media only screen and (max-width: 857px) {
+  /* Blank media query for 820px width */
+  header {
+    flex-direction: column;
     height: auto;
-    text-align: center;
-    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  #flexContainer {
+    display: flex;
+    flex-direction: column;
+  }  
+  aside {
+    flex-direction: column;
+    width: 80%;
+  }
+  #sRecipeCont {
+    width: 80%;
+    flex-direction: column;
+  }
+  #sign-up {
+    width: 80%;
+    flex-direction: column;
   }
 }
 
-/* fonts added if you want to try :
-font-family: 'Abel', sans-serif;
-font-family: 'Bona Nova', serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Raleway Dots', cursive; */
+@media only screen and (max-width: 992px) {
+  /* Blank media query for 1200px width */
+  aside {
+    width: 50%;
+  }
+  #sRecipeCont {
+    width: 50%;
+  }
+  #sign-up {
+    width: 50%;
+  }
+}

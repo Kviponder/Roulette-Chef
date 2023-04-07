@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0DK4S0GFW2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0DK4S0GFW2');
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abel&family=Bona+Nova&family=Raleway+Dots&family=Raleway:ital,wght@0,800;1,100;1,400;1,600&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,16 +33,19 @@
     <title>Roulette Chef</title>
 </head>
 
+<!-- Note to self for KAI need to finish some css, ie: random button, pantry title, recpies title
+    googleAPI, and whatever else may be needed for cards-->
+
 <body id="bodyCSS" class="bg-tan ">
 
-    <header class="h-30 relative">
+    <header class="p-2 m-2" id="headerFlex">
         <div id="titleText" class="text-center">
-            <h1 class="text-5xl font-bold p-2">
+            <h1 class="text-5xl font-bold p-2 m-2">
                 <p id="rChef">Roulette Chef</p>
             </h1>
         </div>
 
-        <nav class="p-1 m-2 w-30 h-20 max-w-s absolute top-0 right-0">
+        <nav class="p-1 m-2 w-30 h-20 max-w-s">
             <div class="flex mt-2">
                 <div class="flex-1">
                     <input
@@ -59,7 +66,6 @@
         <p>Welcome to our website! We're glad you're here. Whether you're a seasoned chef or a novice in the kitchen,
             we've got you covered with our collection of delicious recipes. Explore our site and discover your next
             favorite dish.</p>
-        <br>
         <p id="happyCook">Happy cooking!</p>
     </div>
 
@@ -99,7 +105,7 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
 
         </section>
 
-        <section id="sRecipeCont" class="showNone">
+        <!-- <section id="sRecipeCont" class="showNone">
             <h3>Your Pantry</h3>
             <br>
             <div id="savedRecipes">
@@ -125,64 +131,69 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
                 <li id="sRecipe20" href="">Recipe </li>
             </div>
         </section>
-    </div>
+    </div> -->
 
 
-    <div class="randomBtncontainer">
-        <button class="randomBtn" id="getRandom">Random Button</button>
-        <div id="randomRecipe" class="row recipeRan"></div>
-    </div>
+        <div class="randomBtncontainer">
+            <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
+                a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
+                and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
+            <button class="randomBtn" id="getRandom">Random Button</button>
+            <div id="randomRecipe" class="row recipeRan">
+                <div id="column"></div>
+            </div>
+        </div>
 
 
 
-    <h3 class="text-2xl">Recipes :</h3>
-    <section id="recipeList">
+        <h3 class="text-2xl">Recipes :</h3>
+        <section id="recipeList">
 
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>Recipe Info
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-        <figure>
-            <img>
-            <figcaption>Recipe Name</figcaption>
-            <p>Recipe Info</p>
-        </figure>
-    </section>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+        </section>
     </div>
 
     <script src="./Assets/js/script.js"></script>

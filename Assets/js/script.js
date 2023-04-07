@@ -57,11 +57,20 @@ randomRecipeBtn.addEventListener('click', () => {
 // }
 // return password;
 
-//Below is what we can adjust from Kai's weather app to make searched recipes 1) appear, 2) clear onClick of a clear button
-//Change const's to match what we have as on our search form
-const searchForm = document.querySelector(".search-form");
-const rsList = document.querySelector(".rsList");
-const clearBtn = document.querySelector(".clearBtn");
+
+
+const randomBtn = document.querySelector('.randomBtn');
+
+randomBtn.addEventListener('mouseenter', () => {
+  randomBtn.style.setProperty('--color-r', Math.floor(Math.random() * 255));
+  randomBtn.style.setProperty('--color-g', Math.floor(Math.random() * 255));
+  randomBtn.style.setProperty('--color-b', Math.floor(Math.random() * 255));
+})
+
+
+// const searchForm = document.querySelector(".search-form");
+// const rsList = document.querySelector(".rsList");
+// const clearBtn = document.querySelector(".clearBtn");
 
 // document
 // function addRecentSearch(city) {
