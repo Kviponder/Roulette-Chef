@@ -13,7 +13,7 @@
 }
 
 #bodyCSS {
-  font-family: "Raleway", sans-serif;
+  font-family: monospace, sans-serif;
 }
 header {
   background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
@@ -26,7 +26,7 @@ header {
 }
 
 header h1 {
-  font-family: "Raleway Dots", "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 2.5rem;
   color: var(--redBrown);
   text-decoration: overline underline dotted;
@@ -45,7 +45,7 @@ nav input[type="password"] {
   padding: 8px;
   border: none;
   border-radius: 8px;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   margin-top: 8px;
   background-color: var(--lightBrown);
@@ -58,7 +58,7 @@ nav input[type="password"] {
 }
 
 #rChef {
-  font-family: "Raleway Dots", "Raleway";
+  font-family: sans-serif;
   color: var(--redBrown);
   text-decoration: overline underline dotted;
   left: 25%;
@@ -78,14 +78,14 @@ nav input[type="password"] {
 #greeting h1 {
   font-size: 48px;
   font-weight: 900;
-  font-family: "Raleway Dots", "Raleway", sans-serif;
+  font-family: sans-serif;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
 #greeting p {
   font-size: 24px;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
 }
 
 .flexContainer {
@@ -103,7 +103,7 @@ aside {
 }
 
 aside h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 24px;
   margin-bottom: 8px;
 }
@@ -113,7 +113,7 @@ aside input[type="search"] {
   padding: 8px;
   border: 1px solid var(--darkBrown);
   border-radius: 8px;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   margin-bottom: 8px;
   background-color: white;
@@ -125,7 +125,7 @@ aside button[type="submit"] {
   margin: 2px auto;
   border: none;
   border-radius: 0.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
   color: var(--tan);
   background-color: var(--brown);
@@ -165,7 +165,7 @@ div #inputcont {
 }
 #sign-up h3 {
   font-size: 20px;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: sans-serif;
   margin: 10px 5px 10px 5px;
   text-align: center;
 }
@@ -181,7 +181,7 @@ div #inputcont {
   padding: 8px;
   border: none;
   border-radius: 8px;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
   color: var(--tan);
   background-color: var(--brown);
@@ -270,11 +270,11 @@ div #inputcont {
 .randomBtn {
   display: block;
   margin: 16px auto;
-  width: 10%;
+  width: 75px;
   padding: 8px;
   border: none;
   border-radius: 8px;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
   color: var(--tan);
   background-color: var(--brown);
@@ -345,6 +345,17 @@ div #inputcont {
   transform: scale(1.03);
 }
 
+#recipesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+#recipesContainer h3 {
+  font-weight: bolder;
+  margin-bottom: 25px;
+}
 #recipeList {
   display: flex;
   flex-wrap: wrap;
@@ -359,6 +370,7 @@ div #inputcont {
   flex-direction: column;
   justify-content: space-between;
 }
+
 /*Above is for items within style
  below if for box styles*/
 #recipeList figure {
@@ -409,7 +421,7 @@ div #inputcont {
   padding: 8px;
   border: none;
   border-radius: 8px;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
   color: var(--tan);
   background-color: var(--lightBrown);
