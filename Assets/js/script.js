@@ -1,3 +1,4 @@
+// //New API Key
 // const options = {
 // 	method: 'GET',
 // 	headers: {
@@ -25,6 +26,7 @@
 		.catch(err => console.error(err));
 //Some things to be done I added asterisks just so its easier to look and see what needs done to what part:
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
+
 
 
 //Display the results of the API fetch in the *resultsList element*
@@ -84,6 +86,12 @@ const validateInputs = () => {
     }
 
 };
+
+
+
+//Display the results of the API fetch in the *resultsList element*
+
+//Add an *event listener* to the *sign-in form* that *handles authentication* and *toggles the showNone* class to *display the saved recipes list*.
 
 //Add an *event listener* to the *Random Button* that *fetches a random recipe* from the API and *displays* it on the page
 const randomRecipeBtn = document.getElementById('getRandom');

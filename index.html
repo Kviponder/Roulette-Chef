@@ -2,12 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DK4S0GFW2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BQ2VM59RH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8BQ2VM59RH');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abel&family=Bona+Nova&family=Raleway+Dots&family=Raleway:ital,wght@0,800;1,100;1,400;1,600&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,7 +22,7 @@
             theme: {
                 extend: {
                     colors: {
-                        darkBrown: '#8D7B68',
+                        darkTan: '#8D7B68',
                         brown: '#A4907C',
                         lightBrown: '#C8B6A6',
                         tan: '#F1DEC9',
@@ -24,84 +31,182 @@
             }
         }
     </script>
-    <title>Document</title>
+    <title>Roulette Chef</title>
 </head>
+
+<!-- Note to self for KAI need to finish some css, ie: random button, pantry title, recpies title
+    googleAPI, and whatever else may be needed for cards-->
 
 <body id="bodyCSS" class="bg-tan ">
 
-    <header id="headerCSS" class="h-20 relative">
-        <div id="background">
-        <div  id="titleText" class="text-center">
-            <h1 class="text-5xl font-bold p-3">
-                <p id="rChef">Roulette Chef</p>
+    <header class="p-2 m-2" id="headerFlex">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold p-2 m-2">
+                <p id="rChef"> 
+                    <span class="fire">R</span><span class="burn">o</span><span class="burn">u</span><span class="burn">l</span><span class="burn">e</span><span class="burn">t</span><span class="burn">t</span><span class="fire">e</span>. <span class="fire">C</span><span class="burn">h</span><span class="burn">e</span><span class="fire">f</span>
+                </p>
             </h1>
         </div>
 
-        <nav class="p-3 m-2 w-30 h-15 inline-block max-w-xs absolute top-0 right-0">
+        <nav class="p-1 m-2 w-30 h-20 max-w-s">
             <div class="flex mt-2">
                 <div class="flex-1">
-                    <h3>Email</h3>
+                    <form id="form" action="/">
                     <input
                         class="rounded-l-lg p-2 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
                         placeholder="Username">
+                        <input id="username" name="username" type="text">
+                        <div class="error"></div>
                 </div>
                 <div class="flex-1 ml-2">
-                    <h3 class="text-left">Password</h3>
                     <input class="rounded-r-lg p-2 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
                         placeholder="Password">
+                        <input id="password" name="password" type="password">
+                        <div class="error"></div>
                 </div>
+            </form>
             </div>
-            <button class="signInBtn">Sign In</button>
+            <button type="submit" class="signInBtn">Sign In</button>
         </nav>
-
-
+        <!--Turn this into a sign-up/sign-in option research apis maybe-->
     </header>
+    <div id="greeting">
+        <h2>Welcome to our Recipe Box!</h2>
+        <p>Welcome to our website! We're glad you're here. Whether you're a seasoned chef or a novice in the kitchen,
+            we've got you covered with our collection of delicious recipes. Explore our site and discover your next
+            favorite dish.</p>
+        <p id="happyCook">Happy cooking!</p>
+    </div>
 
-    <aside>
-        <h2>Search</h2>
+    <!--I think that we could have the flex change when someone is signed in
+meaning: when not signed in, search box and sign-in box display,
+when signed in search box shifts left to allow for more room for saved recipes, 
+meaning we can switch from  "".flexContainer { justify-content: space-evenly" to  "justify-content: space-around"-->
+    <div class="flexContainer">
+        <aside class="searchclass bg-lightBrown" id="searchaside">
+            <h2>Search</h2>
 
-        <button class="btn">Search Button</button>
-    </aside>
+            <form>
+                <input type="search" placeholder="Search for a recipe">
+                <button type="submit">Search</button>
 
-    <main>
-        <button class="btn">Random Button</button>
- 
-        <div id="imgContainer">
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
+                <button type="submit">Save Recipe</button>
+            </form>
+            <div id="resultsCont">
+                <ol id="resultsList">
+
+                </ol>
+            </div>
+        </aside>
+        <!-- Need to add place to save recipes, use similar format to recipes below, but just recipe name as link to page-->
+        <!--Comment out this section to see how the page could switch-->
+        <section id="sign-up" class="showNone">
+            <div class="inputcont">
+                <h3>Unlock the pantry</h3>
+                <input class="rounded-l-lg p-1 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
+                    placeholder="Username">
+                <input class="rounded-r-lg p-1 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
+                    placeholder="Password">
+                <br>
+                <button type="submit" id="signUpBtn">Sign Up!</button>
+                <h3>Sign up to start saving your recipes!</h3>
+            </div>
+
+        </section>
+
+        <section id="sRecipeCont" class="showNone">
+            <h3>Your Pantry</h3>
+            <br>
+            <div id="savedRecipes">
+                <li id="sRecipe1" href="">Recipe </li>
+                <li id="sRecipe2" href="">Recipe </li>
+                <li id="sRecipe3" href="">Recipe </li>
+                <li id="sRecipe4" href="">Recipe </li>
+                <li id="sRecipe5" href="">Recipe </li>
+                <li id="sRecipe6" href="">Recipe </li>
+                <li id="sRecipe7" href="">Recipe </li>
+                <li id="sRecipe8" href="">Recipe </li>
+                <li id="sRecipe9" href="">Recipe </li>
+                <li id="sRecipe10" href="">Recipe </li>
+                <li id="sRecipe11" href="">Recipe </li>
+                <li id="sRecipe12" href="">Recipe </li>
+                <li id="sRecipe13" href="">Recipe </li>
+                <li id="sRecipe14" href="">Recipe </li>
+                <li id="sRecipe15" href="">Recipe </li>
+                <li id="sRecipe16" href="">Recipe </li>
+                <li id="sRecipe17" href="">Recipe </li>
+                <li id="sRecipe18" href="">Recipe </li>
+                <li id="sRecipe19" href="">Recipe </li>
+                <li id="sRecipe20" href="">Recipe </li>
+            </div>
+        </section>
+    </div>
+
+
+        <div class="randomBtncontainer">
+            <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
+                a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
+                and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
+            <button class="randomBtn" id="getRandom">Random Button</button>
+            <div id="randomRecipe" class="row recipeRan">
+                <div id="column"></div>
+            </div>
         </div>
-    </main>
-
-    <section id="showNone">
-
-        <!-- showNone class will be used with js to hide text upon an event we decide on, we discussed hiding this upon searching a recipe -->
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora animi, ea quaerat magni fugiat labore
-            inventore dolorem similique quasi consequatur nostrum quas nobis eius temporibus velit mollitia doloremque
-            pariatur ipsum molestiae veritatis reprehenderit suscipit. Amet soluta modi pariatur neque ut dicta ab
-            explicabo eaque. Minima et ad odio assumenda nemo magnam exercitationem ipsa suscipit hic sit! Tempora
-            corrupti, doloremque dolorem atque doloribus pariatur culpa delectus ab esse vitae unde, optio iure autem.
-            Numquam maiores quas voluptas totam praesentium. In laudantium, corrupti dolores odio voluptates quia
-            ratione commodi nobis aliquid vel? Quo, exercitationem praesentium quibusdam itaque ad numquam. Impedit,
-            dolore tempora!
-        </p>
-    </section>
-
-    <section id="recipeList">
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-    </section>
 
 
+        <div id="recipesContainer">
+        <h3 class="text-4xl">Recipes :</h3>
+        <section id="recipeList">
 
-    <script src="/Assets/js/script.js"></script>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>Recipe Info
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+            <figure>
+                <img>
+                <figcaption>Recipe Name</figcaption>
+                <p>Recipe Info</p>
+            </figure>
+        </section>
+        </div>
+    </div>
+
+    <script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
