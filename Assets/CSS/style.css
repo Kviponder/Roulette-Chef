@@ -281,19 +281,20 @@ div #inputcont {
   cursor: pointer;
 }
 .randomBtn:hover {
-  background-color: var(--darkBrown);
-  color: var(--tan);
-  scale: 1.5;
-}
+  background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
+  transform: scale(1.5);}
+
 .randomBtn:active {
-  background-color: var(--lightBrown);
-  color: var(--tan);
+  background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
   transform: translateY(2px);
 }
 
 .randomBtn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px var(--brown);
+  box-shadow: 0 0 0 3px rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));;
 }
 
 #randomRecipe {
@@ -457,8 +458,7 @@ header nav {
     height: auto;
     justify-content: center;
   }
-header nav {
-}
+
   #flexContainer {
     display: flex;
     flex-direction: column;

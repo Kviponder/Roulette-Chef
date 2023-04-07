@@ -63,6 +63,14 @@ const searchForm = document.querySelector(".search-form");
 const rsList = document.querySelector(".rsList");
 const clearBtn = document.querySelector(".clearBtn");
 
+const randomBtn = document.querySelector('.randomBtn');
+
+randomBtn.addEventListener('mouseenter', () => {
+  randomBtn.style.setProperty('--color-r', Math.floor(Math.random() * 255));
+  randomBtn.style.setProperty('--color-g', Math.floor(Math.random() * 255));
+  randomBtn.style.setProperty('--color-b', Math.floor(Math.random() * 255));
+})
+
 // document
 // function addRecentSearch(city) {
 //   const li = document.createElement('li');
