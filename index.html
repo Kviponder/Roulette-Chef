@@ -8,7 +8,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abel&family=Bona+Nova&family=Raleway+Dots&family=Raleway:ital,wght@0,800;1,100;1,400;1,600&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -53,6 +54,15 @@
         </nav>
         <!--Turn this into a sign-up/sign-in option research apis maybe-->
     </header>
+    <div id="greeting">
+        <h1>Welcome to our Recipe Box!</h1>
+        <p>Welcome to our website! We're glad you're here. Whether you're a seasoned chef or a novice in the kitchen,
+            we've got you covered with our collection of delicious recipes. Explore our site and discover your next
+            favorite dish.</p>
+        <br>
+        <p id="happyCook">Happy cooking!</p>
+    </div>
+
     <!--I think that we could have the flex change when someone is signed in
 meaning: when not signed in, search box and sign-in box display,
 when signed in search box shifts left to allow for more room for saved recipes, 
@@ -86,22 +96,25 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
                 <button type="submit" id="signUpBtn">Sign Up!</button>
                 <h3>Sign in to start saving recipes!</h3>
             </div>
-    </div>
 
-    </section>
+        </section>
 
-    <section id="savedRecipes" class="showNone">
-        <li id="sRecipe1" href="">Recipe </li>
-        <li id="sRecipe2" href="">Recipe </li>
-        <li id="sRecipe3" href="">Recipe </li>
-        <li id="sRecipe4" href="">Recipe </li>
-        <li id="sRecipe5" href="">Recipe </li>
-        <li id="sRecipe6" href="">Recipe </li>
-        <li id="sRecipe7" href="">Recipe </li>
-        <li id="sRecipe8" href="">Recipe </li>
-        <li id="sRecipe9" href="">Recipe </li>
-        <li id="sRecipe10" href="">Recipe </li>
-    </section>
+        <section id="sRecipeCont" class="showNone">
+            <h3>Your Pantry</h3>
+            <br>
+            <div id="savedRecipes">
+                <li id="sRecipe1" href="">Recipe </li>
+                <li id="sRecipe2" href="">Recipe </li>
+                <li id="sRecipe3" href="">Recipe </li>
+                <li id="sRecipe4" href="">Recipe </li>
+                <li id="sRecipe5" href="">Recipe </li>
+                <li id="sRecipe6" href="">Recipe </li>
+                <li id="sRecipe7" href="">Recipe </li>
+                <li id="sRecipe8" href="">Recipe </li>
+                <li id="sRecipe9" href="">Recipe </li>
+                <li id="sRecipe10" href="">Recipe </li>
+            </div>
+        </section>
     </div>
 
 
@@ -109,7 +122,7 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
         <button class="randomBtn" id="getRandom">Random Button</button>
     </div>
     <div id="randomRecipe" class="row recipeRan"></div>
-  
+
 
 
 
