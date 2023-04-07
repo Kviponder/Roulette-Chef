@@ -28,8 +28,9 @@
     </script>
     <title>Roulette Chef</title>
 </head>
-<!-- Note to self for KAI need to finish some css, ie: random button, recpies title
+<!-- Note to self for KAI need to finish some css, ie: random button, pantry title, recpies title
     googleAPI, and whatever else may be needed for cards-->
+
 <body id="bodyCSS" class="bg-tan ">
 
     <header class="h-30 relative">
@@ -60,7 +61,6 @@
         <p>Welcome to our website! We're glad you're here. Whether you're a seasoned chef or a novice in the kitchen,
             we've got you covered with our collection of delicious recipes. Explore our site and discover your next
             favorite dish.</p>
-        <br>
         <p id="happyCook">Happy cooking!</p>
     </div>
 
@@ -130,8 +130,11 @@ meaning we can switch from  "".flexContainer { justify-content: space-evenly" to
 
 
     <div class="randomBtncontainer">
+        <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
         <button class="randomBtn" id="getRandom">Random Button</button>
-        <div id="randomRecipe" class="row recipeRan"></div>
+        <div id="randomRecipe" class="row recipeRan">
+            <div id="column"></div>
+        </div>
     </div>
 
 

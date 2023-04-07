@@ -136,6 +136,16 @@ aside button[type="submit"] {
 aside button[type="submit"]:hover {
   background-color: var(--darkTan);
 }
+aside button[type="submit"]:active {
+  background-color: var(--tan);
+}
+
+aside button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--brown), 0 0 0 4px var(--tan);
+}
+
+
 
 div #inputcont {
   display: flex;
@@ -181,8 +191,22 @@ div #inputcont {
   cursor: pointer;
 }
 
-#signUpBtn[type="submit"]:hover {
+#sign-up button[type="submit"]:hover {
   background-color: var(--darkTan);
+}
+
+#sign-up button[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+#sign-up button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 3px var(--tan);
+}
+
+#sign-up button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #sRecipeCont {
@@ -227,6 +251,66 @@ div #inputcont {
   background-color: var(--darkBrown);
   color: var(--tan);
 }
+.randomBtncontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--redBrown);
+  max-height: 400px;
+}
+.randomBtncontainer h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 1rem;
+  color: var(--tan);
+  text-shadow: 1px 1px var(--brown);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.randomBtn {
+  display: block;
+  margin: 16px auto;
+  width: 10%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
+}
+.randomBtn:hover {
+  background-color: var(--darkBrown);
+  color: var(--tan);
+  scale: 1.5;
+}
+.randomBtn:active {
+  background-color: var(--lightBrown);
+  color: var(--tan);
+  transform: translateY(2px);
+}
+
+.randomBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--brown);
+}
+
+
+#randomRecipe {
+  background-color: var(--lightBrown);
+  border: 2px solid var(--darkBrown);
+  border-radius: 8px;
+  padding: 10px;
+  width: 30%;
+  height: 300px;
+  margin: 3px auto;
+}
+
+
 
 #resultsCont {
   background-color: var(--lightBrown);
