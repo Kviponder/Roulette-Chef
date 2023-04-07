@@ -28,20 +28,18 @@
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
 
 
-
 //Display the results of the API fetch in the *resultsList element*
 
 // Sign in form elements*
-// coded out for saving purposes
 const form = document.getElementById('form');
-const form = document.getElementById('username');
-const form = document.getElementById('password');
+const username = document.getElementById('username');
+const password = document.getElementById('password');
 
 //Add an *event listener* to the *sign-in form* that *handles authentication* and *toggles the showNone* class to *display the saved recipes list*.
-FormData.addEventListener('submit', e => {
-	e.preventDefault();
+form.addEventListener('submit', e => {
+    e.preventDefault();
 
-	validateInputs();
+    validateInputs();
 });
 
 const setError = (element, message) => {
@@ -86,12 +84,6 @@ const validateInputs = () => {
     }
 
 };
-
-
-
-//Display the results of the API fetch in the *resultsList element*
-
-//Add an *event listener* to the *sign-in form* that *handles authentication* and *toggles the showNone* class to *display the saved recipes list*.
 
 //Add an *event listener* to the *Random Button* that *fetches a random recipe* from the API and *displays* it on the page
 const randomRecipeBtn = document.getElementById('getRandom');
