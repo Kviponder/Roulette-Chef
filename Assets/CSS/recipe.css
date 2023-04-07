@@ -24,7 +24,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  header h1 {
+  header h2 {
     font-family: 'Raleway Dots', 'Raleway', sans-serif;
     font-size: 2.5rem;
     color: var(--redBrown);
@@ -70,10 +70,11 @@
   }
   
   aside {
+    text-align: center;
     padding: 10px;
     border-radius: 8px;
-    width: 350px;
-    margin: 3px 2px 3px 2px;
+    width: 750px;
+    margin: 30px auto;
     border: 2px solid var(--darkBrown);
   
   }
@@ -82,8 +83,18 @@
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
-  
+  aside h3{
+    font-size: 1.5rem;
+  }
+  aside h4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5rem;
+
+
+  }
   aside input[type="search"] {
     width: 100%;
     padding: 8px;
