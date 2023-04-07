@@ -60,7 +60,6 @@
   #rChef {
     font-family: "Raleway Dots", "Raleway";
     color: var(--redBrown);
-    text-decoration: overline underline dotted;
     left: 25%;
   
     text-transform: uppercase;
