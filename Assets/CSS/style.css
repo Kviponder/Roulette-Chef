@@ -145,8 +145,6 @@ aside button[type="submit"]:focus {
   box-shadow: 0 0 0 2px var(--brown), 0 0 0 4px var(--tan);
 }
 
-
-
 div #inputcont {
   display: flex;
   justify-content: center;
@@ -299,7 +297,6 @@ div #inputcont {
   box-shadow: 0 0 0 3px var(--brown);
 }
 
-
 #randomRecipe {
   background-color: var(--lightBrown);
   border: 2px solid var(--darkBrown);
@@ -309,8 +306,6 @@ div #inputcont {
   height: 300px;
   margin: 3px auto;
 }
-
-
 
 #resultsCont {
   background-color: var(--lightBrown);
@@ -443,14 +438,6 @@ div #inputcont {
   #titleText {
     background-size: 50% 80%;
   }
-  .button {
-    font-size: 1rem;
-    padding: 2rem 0;
-    width: 4rem;
-    height: auto;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -468,18 +455,4 @@ div #inputcont {
   #titleText {
     background-size: 70% 60%;
   }
-  .button {
-    font-size: 8px;
-    padding: 1rem 0;
-    width: 2rem;
-    height: auto;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
 }
-
-/* fonts added if you want to try :
-font-family: 'Abel', sans-serif;
-font-family: 'Bona Nova', serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Raleway Dots', cursive; */
