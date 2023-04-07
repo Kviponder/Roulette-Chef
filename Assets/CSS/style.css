@@ -27,7 +27,7 @@ header {
 
 header h1 {
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   width: auto;
 }
 nav {
@@ -538,7 +538,15 @@ header div {
   body {
     width: 100%;
   }
-
+  header h1 {
+    font-family: sans-serif;
+    animation: animation 0.65s ease-in-out infinite alternate;
+    font-size: 24px;
+    width: auto;
+    -moz-animation: animation 0.65s ease-in-out infinite alternate;
+    -webkit-animation: animation 0.65s ease-in-out infinite alternate;
+    -o-animation: animation 0.65s ease-in-out infinite alternate;
+  }
   aside input[type="search"] {
     font-size: small;
   }
