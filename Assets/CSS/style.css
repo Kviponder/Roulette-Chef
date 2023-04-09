@@ -419,7 +419,7 @@ header div {
   text-align: center;
   width: 100%;
   background-color: var(--redBrown);
-  max-height: 400px;
+  max-height: fit-content;
 }
 .randomBtncontainer h4 {
   font-family: "Raleway", sans-serif;
@@ -462,13 +462,32 @@ header div {
   color: rgb(var(--color-b), var(--color-r), var(--color-g));
 }
 
+.recipeCard {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+}
+.recipeCard h2{
+  font-size: larger;
+
+}
+
+.recipeCard img {
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid var(--darkBrown);
+  border-radius: 24px;
+}
+
 #randomRecipe {
   background-color: var(--lightBrown);
   border: 2px solid var(--darkBrown);
   border-radius: 8px;
   padding: 10px;
   width: 30%;
-  height: 300px;
+  height: fit-content;
   margin: 3px auto;
 }
 

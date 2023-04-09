@@ -24,6 +24,7 @@
 		.then(response => response.json())
 		.then(response => console.log(response))
 		.catch(err => console.error(err));
+		
 //Some things to be done I added asterisks just so its easier to look and see what needs done to what part:
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
 
@@ -85,10 +86,44 @@ const validateInputs = () => {
 
 };
 
-//Add an *event listener* to the *Random Button* that *fetches a random recipe* from the API and *displays* it on the page
-const randomRecipeBtn = document.getElementById('getRandom');
-const randomContainer = document.getElementById('randomRecipe');
 
+const randomRecipeBtn = document.getElementById('getRandom');
+const randomRecipeContainer = document.getElementById('randomRecipe');
+
+function createRandomRecipe(meal) {
+const {strMeal, strMealThumb, strInstructions} = meal;
+//Generate the elements that will apear on the card
+const recipeCard = document.createElement('div');
+  recipeCard.classList.add('recipeCard');
+
+  const recipeCardImg = document.createElement('div');
+  recipeCardImg.classList.add('recipeCard-img');
+
+  const img = document.createElement('img');
+  img.src = strMealThumb;
+  img.alt = strMeal;
+
+  const recipeCardDetails = document.createElement('div');
+  recipeCardDetails.classList.add('recipeCard-details');
+
+  const h2 = document.createElement('h2');
+  h2.textContent = strMeal;
+
+  const instructions = document.createElement('p');
+  instructions.textContent = strInstructions;
+//Assembles HTML
+recipeCardImg.appendChild(img);
+recipeCardDetails.appendChild(h2);
+recipeCardDetails.appendChild(instructions);
+recipeCard.appendChild(recipeCardImg);
+recipeCard.appendChild(recipeCardDetails);
+
+//Clear eexisting recipe details
+randomRecipeContainer.innerHTML = '';
+
+//Add card to page
+randomRecipeContainer.appendChild(recipeCard);
+}
 randomRecipeBtn.addEventListener('click', () => {
 	fetch('https://www.themealdb.com/api/json/v1/1/random.php')
 		.then(response => response.json())
@@ -99,6 +134,13 @@ randomRecipeBtn.addEventListener('click', () => {
 			console.warn(e);
 		});
 });
+
+
+//Add an *event listener* to the *Random Button* that *fetches a random recipe* from the API and *displays* it on the page
+// const randomRecipeBtn = document.getElementById('getRandom');
+// const randomContainer = document.getElementById('randomRecipe');
+
+
 
 //Add an *event listener* to each *saved recipe item* that *fetches the recipe details and *displays* them on a *separate page*.
 
