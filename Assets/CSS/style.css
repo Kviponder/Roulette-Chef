@@ -4,7 +4,11 @@
   --lightBrown: #c8b6a6;
   --tan: #f1dec9;
   --redBrown: #864000;
+<<<<<<< HEAD
+  --darkBrown: #1A120B;
+=======
   --darkBrown: #1a120b;
+>>>>>>> 68aaa36f4f2deef1103572bdd0db4931b4c36f25
 }
 ::selection {
   background-color: black;
@@ -12,12 +16,137 @@
 }
 
 #bodyCSS {
+<<<<<<< HEAD
+  font-family: "Raleway", sans-serif;
+=======
   font-family: sans-serif;
+>>>>>>> 68aaa36f4f2deef1103572bdd0db4931b4c36f25
 }
 header {
   background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
   height: 120px;
   display: flex;
+<<<<<<< HEAD
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-family: 'Raleway Dots', 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  color: var(--redBrown);
+  text-decoration: overline underline dotted;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+nav h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+nav input[type="text"],
+nav input[type="password"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--lightBrown);
+  width: 10rem;
+}
+
+#rChef {
+  font-family: "Raleway Dots", "Raleway";
+  color: var(--redBrown);
+  text-decoration: overline underline dotted;
+  left: 25%;
+
+  text-transform: uppercase;
+  text-shadow: 1px 9px 15px black;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+aside {
+  padding: 10px;
+  border-radius: 8px;
+  width: 350px;
+  margin: 3px 2px 3px 2px;
+  border: 2px solid var(--darkBrown);
+
+}
+
+aside h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+aside input[type="search"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--darkBrown);
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+aside button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
+}
+
+aside button[type="submit"]:hover {
+  background-color: var(--darkTan);
+}
+#resultsCont {
+  background-color: var(--lightBrown);
+  border: 2px solid var(--darkBrown);
+  border-radius: 8px;
+  padding: 10px;
+  width: 90%;
+  margin: 3px 2px 3px 2px;
+}
+#resultsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#resultsList li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.signInBtn {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px;
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(236, 228, 228);
+  background: linear-gradient(90deg, rgb(88, 75, 38) 0%, rgb(100, 90, 60) 100%);
+=======
   justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
@@ -62,6 +191,7 @@ nav #inputC {
   color: var(--darkBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
+>>>>>>> 68aaa36f4f2deef1103572bdd0db4931b4c36f25
   border-radius: 4px;
   width: 100%;
 }
@@ -695,6 +825,13 @@ header div {
   }
 }
 
+<<<<<<< HEAD
+/* fonts added if you want to try :
+font-family: 'Abel', sans-serif;
+font-family: 'Bona Nova', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Raleway Dots', cursive; 
+=======
 @media only screen and (max-width: 992px) {
   body {
     width: 100%;
@@ -721,3 +858,4 @@ header div {
     margin: 10px;
   }
 }
+>>>>>>> 68aaa36f4f2deef1103572bdd0db4931b4c36f25
