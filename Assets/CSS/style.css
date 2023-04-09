@@ -12,7 +12,7 @@
 }
 
 #bodyCSS {
-  font-family: monospace, sans-serif;
+  font-family: sans-serif;
 }
 header {
   background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
@@ -38,43 +38,89 @@ nav {
 }
 nav #inputC {
   margin: 5px auto;
+  display: flex;
+  justify-content: center;
 }
-
-#inputCol {
+/* .inputCont {
+  display: flex;
+  flex-direction: column;
+} */
+#formText {
+  text-align: center;
+  font-size: 36px;
+  background-color: var(--lightBrown);
+  width: fit-content;
+  padding: 5px;
+  margin: 2px auto;
+  border: 1px solid var(--darkBrown);
+  border-radius: 22px;
+}
+.inputCol {
+  display: inline-block;
   background-color: #fff;
-  max-width: 300px;
+  height: fit-content;
   color: var(--darkBrown);
   padding: 10px;
   margin: 3px 2px 3px 2px;
   border-radius: 4px;
+  width: 100%;
 }
 
 #inputC {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  min-width: 100px;
+  width: 25%;
 }
 
-#inputC input {
+/* nav {
+  background-color: var(--brown);
+  margin: 5px auto;
+  padding: 5px;
   width: 100%;
 }
- .fire {
+.inputCont form {
+  padding: 15px;
+  margin: 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputCont form #IBox {
+  border-left: 2px solid var(--darkBrown);
+  border-right: 2px solid var(--darkBrown);
+  padding: 15px;
+}
+
+.inputCol {
+  background-color: #fff;
+  color: var(--darkBrown);
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  width: 45%;
+}
+
+.IBox {
+  display: inline-block;
+ 
+} */
+
+.fire {
   width: fit-content;
- }
-nav input[type="text"],
-nav input[type="password"] {
+}
+nav div form input[type="text"],
+nav div form input[type="password"] {
   padding: 8px;
   border: none;
   border-radius: 8px;
   font-family: sans-serif;
   font-size: 16px;
   margin-top: 8px;
-  background-color: var(--lightBrown);
+  background-color: #fff;
   width: 160px;
-}
-
-nav button {
-  width: 50px;
 }
 
 #rChef {
@@ -158,9 +204,8 @@ span {
   }
   100% {
     text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
-    -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
-    -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
-  
+      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
   }
 }
 
@@ -175,6 +220,7 @@ span {
   text-decoration: none;
   color: var(--darkBrown);
   border-radius: 4px;
+  margin-top: 5px;
 }
 
 .signInBtn:hover {
