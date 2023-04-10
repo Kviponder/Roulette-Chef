@@ -27,7 +27,33 @@
 		
 //Some things to be done I added asterisks just so its easier to look and see what needs done to what part:
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
+//Fetches reuslts, need to add Event Listener to fetch upon clicking the search button 
+var recipeResult = document.getElementById('resultsList');
+var recipeSearchBtn = document.getElementById('searchbtn');
+var recipeInput = document.getElementById('ingredinput').value;
 
+fetch('https://themealdb.p.rapidapi.com/search.php?s=', options)
+	.then(response => response.json())
+	.then(response => {
+		var searchMeal = response.meals[0];
+		console.log(searchMeal);
+		console.log(searchMeal.strMeal);
+		console.log(searchMeal.strMealThumb);
+		let count = 1;
+		for (let i in searchMeal) {
+			var stringIngredients = '';
+			var stringMeasurements = '';
+			if (i.startsWith('strIngredient') && searchMeal[i]) {
+				stringIngredients = searchMeal[i];
+				stringMeasurements = searchMeal['strMeasure' + count];
+				count += 1;
+				console.log(stringMeasurements, stringIngredients);
+			}
+		}
+		console.log(searchMeal.strInstructions);
+	})
+	.catch(err => console.error(err));
+	
 
 //Display the results of the API fetch in the *resultsList element*
 
@@ -86,7 +112,7 @@ const validateInputs = () => {
 
 };
 
-
+//Random recipe from random recipe button
 const randomRecipeBtn = document.getElementById('getRandom');
 const randomRecipeContainer = document.getElementById('randomRecipe');
 
@@ -136,12 +162,6 @@ randomRecipeBtn.addEventListener('click', () => {
 });
 
 
-//Add an *event listener* to the *Random Button* that *fetches a random recipe* from the API and *displays* it on the page
-// const randomRecipeBtn = document.getElementById('getRandom');
-// const randomContainer = document.getElementById('randomRecipe');
-
-
-
 //Add an *event listener* to each *saved recipe item* that *fetches the recipe details and *displays* them on a *separate page*.
 
 
@@ -184,11 +204,3 @@ randomBtn.addEventListener('mouseenter', () => {
 // rsList.removeChild(rsList.firstChild);
 //   }
 // });
-
-// Below are other uses for the tasty api to consider
-
-
-//  randomRecipe();
-
-//  getLocalStorage ();
-//})
