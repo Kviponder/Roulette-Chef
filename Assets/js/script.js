@@ -1,58 +1,90 @@
-// //New API Key
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
-// 		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://themealdb.p.rapidapi.com/random.php', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-	const options = {
-		method: 'GET',
-		headers: {
-			'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
-			'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
-		}
-	};
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
+		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
+	}
+};
 	
-	fetch('https://themealdb.p.rapidapi.com/categories.php', options)
-		.then(response => response.json())
-		.then(response => console.log(response))
-		.catch(err => console.error(err));
+fetch('https://themealdb.p.rapidapi.com/categories.php', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 		
-//Some things to be done I added asterisks just so its easier to look and see what needs done to what part:
+
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
-//Fetches reuslts, need to add Event Listener to fetch upon clicking the search button 
 var recipeResult = document.getElementById('resultsList');
 var recipeSearchBtn = document.getElementById('searchbtn');
+var apiUrl ="https://themealdb.p.rapidapi.com/search.php?s=";
 var recipeInput = document.getElementById('ingredinput').value;
 
-fetch('https://themealdb.p.rapidapi.com/search.php?s=', options)
-	.then(response => response.json())
-	.then(response => {
-		var searchMeal = response.meals[0];
-		console.log(searchMeal);
-		console.log(searchMeal.strMeal);
-		console.log(searchMeal.strMealThumb);
-		let count = 1;
-		for (let i in searchMeal) {
-			var stringIngredients = '';
-			var stringMeasurements = '';
-			if (i.startsWith('strIngredient') && searchMeal[i]) {
-				stringIngredients = searchMeal[i];
-				stringMeasurements = searchMeal['strMeasure' + count];
-				count += 1;
-				console.log(stringMeasurements, stringIngredients);
+//recipeSearchBtn.addEventListener("click", () => {
+	//Fetch recipe results from Meal DB API
+	fetch(apiUrl + recipeInput, options)
+		.then(response => response.json())
+		.then(response => {
+			var searchMeal = response.meals[0];
+			console.log(searchMeal);
+			//Logs name of recipe
+			console.log(searchMeal.strMeal);
+			//Logs ohoto of recipe
+			console.log(searchMeal.strMealThumb);
+			let count = 1;
+			//Display ingredient and amount next to eachother
+			var recipeIngredients =[];
+			for (let i in searchMeal) {
+				var stringIngredients = "";
+				var stringMeasurements = "";
+				if (i.startsWith('strIngredient') && searchMeal[i]) {
+					stringIngredients = searchMeal[i];
+					stringMeasurements = searchMeal[`strMeasure` + count];
+					count += 1;
+					recipeIngredients.push(`${stringMeasurements} ${stringIngredients}`);
+				}
 			}
-		}
+		//Display ingredient and amount next to each other
+		console.log(recipeIngredients);
+		//Display recipe instructions
 		console.log(searchMeal.strInstructions);
-	})
-	.catch(err => console.error(err));
+
+		//Display the results of the API fetch in the *resultsList element* in the UI
+		recipeResult.innerHTML = `
+		<div class="searchnformation">
+			<h3>${searchMeal.strMeal}</h3>
+		</div>
+		<img src=${searchMeal.strMealThumb}>
+		<div id="recipestringredients"></div>
+		<div id="stringinstructions">
+			<button id="closeinstructions">X</button>
+			<div id="recipeinstructions">${searchMeal.strInstructions}</div>
+		</div>
+		<button type="submit" id="openinstructions">View Insturctions</button>`;
+		var recipeStrIngredients = document.getElementById("recipestringredients");
+		//Display ingredients in a list 
+		var parentElement = document.createElement("ul");
+		var stringInstructions = document.getElementById("stringinstructions");
+		var closeInstructions = document.getElementById("closeinstructions");
+		var openInstructions = document.getElementById("openinstructions");
+		recipeIngredients.forEach((i) => {
+			var childElement = document.createElement("li");
+			childElement.innerText = i;
+			parentElement.appendChild(childElement);
+			recipeStrIngredients.appendChild(parentElement);
+		});
+		//Event listener to view instructions
+		openInstructions.addEventListener("click", () => {
+			stringInstructions.style.display = "block";
+		});
+		//Event listener to close instructions
+		closeInstructions.addEventListener("click", () => {
+			stringInstructions.style.display = "none";
+		});
+
+	});
+//});
+	
+	
+
 	
 
 //Display the results of the API fetch in the *resultsList element*
