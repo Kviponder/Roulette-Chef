@@ -1,17 +1,3 @@
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'f466c28a93mshc3c44718ab029c4p1af359jsnefa63d91cf93',
-		'X-RapidAPI-Host': 'themealdb.p.rapidapi.com'
-	}
-};
-	
-fetch('https://themealdb.p.rapidapi.com/categories.php', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-		
-
 //Add an *event listener* to the *search form* that *fetches recipe results* from an API
 var recipeResult = document.getElementById('resultsList');
 var recipeSearchBtn = document.getElementById('searchbtn');
@@ -82,121 +68,114 @@ var recipeInput = document.getElementById('ingredinput').value;
 
 	});
 //});
-	
-	
-
-	
 
 //Display the results of the API fetch in the *resultsList element*
 
 // Sign in form elements*
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const password = document.getElementById('password');
+const form = document.getElementById("form");
+const username = document.getElementById("username");
+const password = document.getElementById("password");
 
 //Add an *event listener* to the *sign-in form* that *handles authentication* and *toggles the showNone* class to *display the saved recipes list*.
-form.addEventListener('submit', e => {
-    e.preventDefault();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    validateInputs();
+  validateInputs();
 });
 
 const setError = (element, message) => {
-	const inputControl = element.parentElement;
-	const errorDisplay = inputControl.querySelector('error');
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector("error");
 
-	errorDisplay.innerText = message;
-	inputControl.classList.add('error');
-	inputControl.classList.remove('success')
-}
-
-const setSuccess = element => {
-	const inputControl = element.parentElement;
-	const errorDisplay = inputControl.querySelector('error');
-
-	errorDisplay.innerText = '';
-	inputControl.classList.add('success');
-	inputControl.classList.remove('error');
+  errorDisplay.innerText = message;
+  inputControl.classList.add("error");
+  inputControl.classList.remove("success");
 };
 
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+const setSuccess = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector("error");
+
+  errorDisplay.innerText = "";
+  inputControl.classList.add("success");
+  inputControl.classList.remove("error");
+};
+
+const isValidEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
 
 const validateInputs = () => {
-	const usernameValue = username.value.trim();
-	const passwordValue = password.value.trim();
+  const usernameValue = username.value.trim();
+  const passwordValue = password.value.trim();
 
-	if(usernameValue === '') {
-		setError(username, 'Username is required');
-	} else {
-		setSuccess(username);
-	}
+  if (usernameValue === "") {
+    setError(username, "Username is required");
+  } else {
+    setSuccess(username);
+  }
 
-	if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
-    } else {
-        setSuccess(password);
-    }
-
+  if (passwordValue === "") {
+    setError(password, "Password is required");
+  } else if (passwordValue.length < 8) {
+    setError(password, "Password must be at least 8 character.");
+  } else {
+    setSuccess(password);
+  }
 };
 
-//Random recipe from random recipe button
-const randomRecipeBtn = document.getElementById('getRandom');
-const randomRecipeContainer = document.getElementById('randomRecipe');
+const randomRecipeBtn = document.getElementById("getRandom");
+const randomRecipeContainer = document.getElementById("randomRecipe");
 
 function createRandomRecipe(meal) {
-const {strMeal, strMealThumb, strInstructions} = meal;
-//Generate the elements that will apear on the card
-const recipeCard = document.createElement('div');
-  recipeCard.classList.add('recipeCard');
+  const { strMeal, strMealThumb, strInstructions } = meal;
+  //Generate the elements that will apear on the card
+  const recipeCard = document.createElement("div");
+  recipeCard.classList.add("recipeCard");
 
-  const recipeCardImg = document.createElement('div');
-  recipeCardImg.classList.add('recipeCard-img');
+  const recipeCardImg = document.createElement("div");
+  recipeCardImg.classList.add("recipeCard-img");
 
-  const img = document.createElement('img');
+  const img = document.createElement("img");
   img.src = strMealThumb;
   img.alt = strMeal;
 
-  const recipeCardDetails = document.createElement('div');
-  recipeCardDetails.classList.add('recipeCard-details');
+  const recipeCardDetails = document.createElement("div");
+  recipeCardDetails.classList.add("recipeCard-details");
 
-  const h2 = document.createElement('h2');
+  const h2 = document.createElement("h2");
   h2.textContent = strMeal;
 
-  const instructions = document.createElement('p');
+  const instructions = document.createElement("p");
   instructions.textContent = strInstructions;
-//Assembles HTML
-recipeCardImg.appendChild(img);
-recipeCardDetails.appendChild(h2);
-recipeCardDetails.appendChild(instructions);
-recipeCard.appendChild(recipeCardImg);
-recipeCard.appendChild(recipeCardDetails);
+  //Assembles HTML
+  recipeCardImg.appendChild(img);
+  recipeCardDetails.appendChild(h2);
+  recipeCardDetails.appendChild(instructions);
+  recipeCard.appendChild(recipeCardImg);
+  recipeCard.appendChild(recipeCardDetails);
 
-//Clear eexisting recipe details
-randomRecipeContainer.innerHTML = '';
+  //Clear eexisting recipe details
+  randomRecipeContainer.innerHTML = "";
 
-//Add card to page
-randomRecipeContainer.appendChild(recipeCard);
+  //Add card to page
+  randomRecipeContainer.appendChild(recipeCard);
 }
-randomRecipeBtn.addEventListener('click', () => {
-	fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-		.then(response => response.json())
-		.then(response => {
-			createRandomRecipe(response.meals[0]);
-		})
-		.catch(e => {
-			console.warn(e);
-		});
+randomRecipeBtn.addEventListener("click", () => {
+  fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+    .then((response) => response.json())
+    .then((response) => {
+      createRandomRecipe(response.meals[0]);
+    })
+    .catch((e) => {
+      console.warn(e);
+    });
 });
 
 
 //Add an *event listener* to each *saved recipe item* that *fetches the recipe details and *displays* them on a *separate page*.
-
-
 
 // let password = "";
 // for (let i = 0; i < length; i++) {
@@ -204,16 +183,13 @@ randomRecipeBtn.addEventListener('click', () => {
 // }
 // return password;
 
+const randomBtn = document.querySelector(".randomBtn");
 
-
-const randomBtn = document.querySelector('.randomBtn');
-
-randomBtn.addEventListener('mouseenter', () => {
-  randomBtn.style.setProperty('--color-r', Math.floor(Math.random() * 255));
-  randomBtn.style.setProperty('--color-g', Math.floor(Math.random() * 255));
-  randomBtn.style.setProperty('--color-b', Math.floor(Math.random() * 255));
-})
-
+randomBtn.addEventListener("mouseenter", () => {
+  randomBtn.style.setProperty("--color-r", Math.floor(Math.random() * 255));
+  randomBtn.style.setProperty("--color-g", Math.floor(Math.random() * 255));
+  randomBtn.style.setProperty("--color-b", Math.floor(Math.random() * 255));
+});
 
 // const searchForm = document.querySelector(".search-form");
 // const rsList = document.querySelector(".rsList");
