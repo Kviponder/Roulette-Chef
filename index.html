@@ -39,176 +39,54 @@
 
 <body id="bodyCSS" class="bg-tan ">
 
-    <header class="p-2 m-2" id="headerFlex">
-        <div class="text-center">
-            <h1 class="text-5xl font-bold p-2 m-2">
-                <p id="rChef"> 
-                    <span class="fire">R</span><span class="burn">o</span><span class="burn">u</span><span class="burn">l</span><span class="burn">e</span><span class="burn">t</span><span class="burn">t</span><span class="fire">e</span>. <span class="fire">C</span><span class="burn">h</span><span class="burn">e</span><span class="fire">f</span>
+    <header class="" id="headerFlex">
+        <div class="fire">
+            <h1 class="">
+                <p id="rChef">
+                    <span class="fire">⊛ </span>
+                    <span class="burn">r</span>
+                    <span class="burn">o</span>
+                    <span class="burn">u</span>
+                    <span class="fire">l</span>
+                    <span class="fire">e</span>
+                    <span class="burn">t</span>
+                    <span class="burn">t</span>
+                    <span class="fire">e .</span>
+                <div class=""></div>
+                <span class="fire">C</span>
+                <span class="burn">h</span>
+                <span class="burn">e</span>
+                <span class="burn">f</span>
+                <span class="fire">⊛ </span>
+
                 </p>
             </h1>
         </div>
 
-        <nav class="p-1 m-2 w-30 h-20 max-w-s">
-            <div class="flex mt-2">
-                <div class="flex-1">
-                    <form id="form" action="/">
-                    <input
-                        class="rounded-l-lg p-2 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white" input id="username" name="username" type="text"
-                        placeholder="Username">
-                        <div class="input-control">
-                        <div class="error">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-1 ml-2">
-                    <input class="rounded-r-lg p-2 border-t border-b border-r text-gray-800 border-gray-200 bg-white" id="password" name="password" type="password"
-                        placeholder="Password">
-                        <div class="input-control">
-                        <div class="error">
-                        </div>
-                    </div>
-                </div>
-            </form>
-            </div>
-            <button type="submit" class="signInBtn">Sign In</button>
-        </nav>
         <!--Turn this into a sign-up/sign-in option research apis maybe-->
     </header>
-    <div id="greeting">
-        <h2>Welcome to our Recipe Box!</h2>
-        <p>Welcome to our website! We're glad you're here. Whether you're a seasoned chef or a novice in the kitchen,
-            we've got you covered with our collection of delicious recipes. Explore our site and discover your next
-            favorite dish.</p>
-        <p id="happyCook">Happy cooking!</p>
-    </div>
 
-    <!--I think that we could have the flex change when someone is signed in
-meaning: when not signed in, search box and sign-in box display,
-when signed in search box shifts left to allow for more room for saved recipes, 
-meaning we can switch from  "".flexContainer { justify-content: space-evenly" to  "justify-content: space-around"-->
-    <div class="flexContainer">
-        <aside class="searchclass bg-lightBrown" id="searchaside">
-            <h2>Search</h2>
+    <div class="randomBtncontainer">
 
-            <form>
-                <input type="search" placeholder="Search for a recipe">
-                <button type="submit">Search</button>
-
-                <button type="submit">Save Recipe</button>
-            </form>
-            <div id="resultsCont">
-                <ol id="resultsList">
-
-                </ol>
-            </div>
-        </aside>
-        <!-- Need to add place to save recipes, use similar format to recipes below, but just recipe name as link to page-->
-        <!--Comment out this section to see how the page could switch-->
-        <section id="sign-up" class="showNone">
-            <div class="inputcont">
-                <h3>Unlock the pantry</h3>
-                <input class="rounded-l-lg p-1 border-t mr-0 border-b border-l text-gray-800 border-darkBrown bg-white"
-                    placeholder="Username">
-                <input class="rounded-r-lg p-1 border-t border-b border-r text-gray-800 border-gray-200 bg-white"
-                    placeholder="Password">
-                <br>
-                <button type="submit" id="signUpBtn">Sign Up!</button>
-                <h3>Sign up to start saving your recipes!</h3>
-            </div>
-
-        </section>
-
-        <section id="sRecipeCont" class="showNone">
-            <h3>Your Pantry</h3>
-            <br>
-            <div id="savedRecipes">
-                <li id="sRecipe1" href="">Recipe </li>
-                <li id="sRecipe2" href="">Recipe </li>
-                <li id="sRecipe3" href="">Recipe </li>
-                <li id="sRecipe4" href="">Recipe </li>
-                <li id="sRecipe5" href="">Recipe </li>
-                <li id="sRecipe6" href="">Recipe </li>
-                <li id="sRecipe7" href="">Recipe </li>
-                <li id="sRecipe8" href="">Recipe </li>
-                <li id="sRecipe9" href="">Recipe </li>
-                <li id="sRecipe10" href="">Recipe </li>
-                <li id="sRecipe11" href="">Recipe </li>
-                <li id="sRecipe12" href="">Recipe </li>
-                <li id="sRecipe13" href="">Recipe </li>
-                <li id="sRecipe14" href="">Recipe </li>
-                <li id="sRecipe15" href="">Recipe </li>
-                <li id="sRecipe16" href="">Recipe </li>
-                <li id="sRecipe17" href="">Recipe </li>
-                <li id="sRecipe18" href="">Recipe </li>
-                <li id="sRecipe19" href="">Recipe </li>
-                <li id="sRecipe20" href="">Recipe </li>
-            </div>
-        </section>
-    </div>
-
-
-        <div class="randomBtncontainer">
-            <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
-                a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
-                and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
-            <button class="randomBtn" id="getRandom">Random Button</button>
-            <div id="randomRecipe" class="row recipeRan">
-                <div id="column"></div>
-            </div>
+        <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
+            a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
+            and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
+        <button class="randomBtn" id="getRandom">Random Button</button>
+        <div id="randomRecipe" class="row recipeRan">
+            <div id="column"></div>
         </div>
 
+        <canvas id="canvas">
 
-        <div id="recipesContainer">
-        <h3 class="text-4xl">Recipes :</h3>
-        <section id="recipeList">
-
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>Recipe Info
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-            <figure>
-                <img>
-                <figcaption>Recipe Name</figcaption>
-                <p>Recipe Info</p>
-            </figure>
-        </section>
+        </canvas>
+        <div>
+            <h1>Ball Count: <span id="ballCount">0</span></h1>
         </div>
+        <button id="clearBtn">Clear Count</button>
     </div>
+
+
+
 
     <script src="./Assets/js/script.js"></script>
 </body>

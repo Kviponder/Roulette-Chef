@@ -30,8 +30,10 @@ header h1 {
   font-size: 36px;
   width: auto;
 }
+
 header 
 .fire {
+
   width: fit-content;
 }
 #rChef {
@@ -175,9 +177,9 @@ span {
   max-height: fit-content;
   margin: auto;
 }
+
 .recipeCard h2{
   font-size: larger;
-
 }
 
 .recipeCard img {
@@ -194,7 +196,9 @@ span {
   border: 2px solid var(--darkBrown);
   border-radius: 8px;
   padding: 10px;
+
   width: 60% ;
+
   height: fit-content;
   margin: 3px auto;
 }
@@ -241,7 +245,7 @@ canvas {
   body {
     width: 100%;
   }
- 
+
   #rChef {
     scale: 70%;
     text-align: center;
@@ -254,5 +258,4 @@ canvas {
     width: 100%;
   }
 }
-
 
