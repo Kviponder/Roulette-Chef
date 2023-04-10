@@ -467,9 +467,8 @@ header div {
   max-height: fit-content;
   margin: auto;
 }
-.recipeCard h2{
+.recipeCard h2 {
   font-size: larger;
-
 }
 
 .recipeCard img {
@@ -486,7 +485,7 @@ header div {
   border: 2px solid var(--darkBrown);
   border-radius: 8px;
   padding: 10px;
-  width: 60% ;
+  width: 60%;
   height: fit-content;
   margin: 3px auto;
 }
