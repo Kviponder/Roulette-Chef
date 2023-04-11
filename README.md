@@ -18,7 +18,7 @@ MealDB API for recipe data
 
 ## Usage
 
-    Type an ingredient into the input field and press the "search" button to get recipe suggestions.
+    
 
     Press the "random recipe" button to generate a random recipe suggestion.
 
@@ -33,5 +33,5 @@ MealDB API for recipe data
 
 ## screenshots
 
-![alt text](image_url)
-![ALT TEXT](image_url)
+![alt text](./Assets/img/Screenshot%202023-04-10%20202859.png)
+![ALT TEXT](./Assets/img/Screenshot%202023-04-10%20204106.png)

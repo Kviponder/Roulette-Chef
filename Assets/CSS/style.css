@@ -1,5 +1,5 @@
 :root {
-  --darkTan: #8d7b68;
+  --darkTan: #947b62;
   --brown: #a4907c;
   --lightBrown: #c8b6a6;
   --tan: #d1bea8;
@@ -22,6 +22,8 @@ header {
   align-items: center;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(133, 124, 124, 0.3);
+
+
   width: 100%;
 }
 
