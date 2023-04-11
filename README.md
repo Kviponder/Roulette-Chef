@@ -33,5 +33,8 @@ MealDB API for recipe data
 
 ## screenshots
 
-![alt text](./Assets/img/Screenshot%202023-04-10%20202859.png)
-![ALT TEXT](./Assets/img/Screenshot%202023-04-10%20204106.png)
+![Screenshot (115)](https://user-images.githubusercontent.com/125221411/231032060-d9875f2f-fbc3-4683-8af6-0a219637d31b.png)
+![Screenshot (118)](https://user-images.githubusercontent.com/125221411/231032081-ead5003f-a597-4398-9ad3-1c8d7a0ef68f.png)
+![Screenshot (116)](https://user-images.githubusercontent.com/125221411/231032092-41498969-f729-438a-9b26-8f5fc42219a7.png)
+![Screenshot (117)](https://user-images.githubusercontent.com/125221411/231032104-935c7544-c54b-4907-9d6b-c14f1822c665.png)
+
