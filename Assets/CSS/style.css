@@ -2,7 +2,7 @@
   --darkTan: #8d7b68;
   --brown: #a4907c;
   --lightBrown: #c8b6a6;
-  --tan: #f1dec9;
+  --tan: #d1bea8;
   --redBrown: #aa6320;
   --darkBrown: #3d2a19;
 }
@@ -21,12 +21,12 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(133, 124, 124, 0.3);
   width: 100%;
 }
 
 header h1 {
-  font-family: sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
   font-size: 36px;
   width: auto;
 }
@@ -148,7 +148,7 @@ span {
   padding: 8px;
   border: none;
   border-radius: 8px;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: var(--tan);
   background-color: var(--brown);
