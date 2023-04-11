@@ -25,7 +25,7 @@ MealDB API for recipe data
 ## Links
 
     Live Site: https://kviponder.github.io/team-project/?
-    Repository: https://github.com/Kviponder/team-project
+    Repository: https://github.com/Kviponder/Roulette-Chef.git
 
 ## User Story
 
