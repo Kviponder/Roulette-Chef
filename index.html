@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag api (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DK4S0GFW2"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BQ2VM59RH"></script>
     <script>
@@ -16,6 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+    <!--Link to tailwindCSS source-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,14 +32,20 @@
             }
         }
     </script>
+    <!--Webpage title-->
     <title>RouletteChef</title>
 </head>
 
-<body id="bodyCSS" class="bg-tan ">
 
+<!--Class form from tailwind CSS that covers all of the properties of the page -->
+<body id="bodyCSS" class="bg-tan ">
+    <!--header-->
     <header class="" id="headerFlex">
+        <!--div for fire animation-->
         <div class="fire">
+            <!--Main heading for Roulette Chef-->
             <h1 class="">
+                <!--Paragraph description for roulette formatting-->
                 <p id="rChef">
                     <span class="fire">⊛ </span>
                     <span class="burn">r</span>
@@ -58,34 +65,34 @@
                 </p>
             </h1>
         </div>
-
-        <!--Turn this into a sign-up/sign-in option research apis maybe-->
     </header>
 
+    <!--Container for random recipe button and generator-->
     <div class="randomBtncontainer">
-
+        <!--Welcome/description paragraph-->
         <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
             a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
             and exciting meal ideas. Generate simple yet delicious recipes at the touch of a button. Try it out now and take your cooking to the next level!</h4>
+        <!--Random recipe button-->
         <button class="randomBtn" id="getRandom">Generate Recipe</button>
 
+        <!--location for random recipe to be inserted-->
         <div id="randomRecipe" class="row recipeRan">
+            <!--location for random recipe card to be placed from JS-->
             <div id="column"></div>
         </div>
 
+        <!--location for ball animation (local storage)-->
         <canvas id="canvas">
-
         </canvas>
         <div>
             <h1>Recipe Count: <span id="ballCount">0</span></h1>
         </div>
         <button id="clearBtn">Clear Count</button>
     </div>
-
-
-
+    <div class="saverecipecontainer">
+    </div>
 
     <script src="./Assets/js/script.js"></script>
 </body>
-
 </html>
